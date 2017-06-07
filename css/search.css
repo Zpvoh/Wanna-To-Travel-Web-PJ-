@@ -1,0 +1,99 @@
+section h2{
+    color: black;
+    text-align: left;
+    width: 99.3%;
+    height: 1.5em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: darkgray;
+}
+
+section{
+    text-align: left;
+    color: black;
+    border-radius: 0.5em;
+    background-color: #DDDDDD;
+}
+
+section a{
+    color: azure;
+}
+
+#searchStage div{
+    margin-left: 2em;
+}
+
+#searchStage input[type="text"], textarea{
+    position: relative;
+    bottom: 1em;
+    width: 70%;
+}
+
+#searchStage textarea{
+    position: relative;
+    bottom: 1em;
+    width: 70%;
+    height: 3em;
+}
+
+#filterButton{
+    padding: 0.5em;
+    position: relative;
+    margin-left: 2em;
+    bottom: 1em;
+    border-radius: 10px;
+    background-color: indigo;
+}
+
+#resultStage{
+    padding-bottom: 2em;
+}
+
+#resultStage div{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 0;
+}
+
+#resultStage p{
+    width: 40em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#pageTurner{
+    position: relative;
+    left: 40%;
+}
+
+#pageTurner a{
+    color: indigo;
+    padding: 0 0.5em 0 0.5em;
+}
+
+#resultStage div>div{
+    display: inline-flex;
+    width: 92%;
+}
+
+#resultStage div div div{
+    display: block;
+    width: 30em;
+    border: none;
+}
+
+#resultStage h1{
+    margin: 0.5em;
+    font-size: 1.5em;
+    color: darkblue;
+}
+
+#resultStage p{
+    margin: 1em;
+}
+
+#resultStage img{
+    margin: 0.5em;
+}

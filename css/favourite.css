@@ -1,0 +1,79 @@
+section h2{
+    color: black;
+    text-align: left;
+    width: 99.3%;
+    height: 1.5em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: darkgray;
+}
+
+section{
+    text-align: left;
+    color: black;
+    border-radius: 0.5em;
+    background-color: #DDDDDD;
+}
+
+section a{
+    color: azure;
+}
+
+#pageTurner{
+    position: relative;
+    left: 40%;
+}
+
+#pageTurner a{
+    color: indigo;
+    padding: 0 0.5em 0 0.5em;
+}
+
+#myFavourite{
+    padding-bottom: 2em;
+}
+
+#myFavourite div{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 0;
+}
+
+#myFavourite div>div{
+    position: relative;
+    display: inline-flex;
+    width: 92%;
+}
+
+#myFavourite div div div{
+    display: block;
+    width: 30em;
+    border: none;
+}
+
+#myFavourite h1{
+    margin: 0.5em;
+    font-size: 1.5em;
+    color: darkblue;
+}
+
+#myFavourite p{
+    margin: 1em;
+}
+
+#myFavourite img{
+    margin: 0.5em;
+}
+
+input[value="Delete"]{
+    position: absolute;
+    top:25%;
+    right: 1%;
+    height: 3em;
+    color: azure;
+    background-color: firebrick;
+    border-radius: 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    margin-right: 1em;
+}

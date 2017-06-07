@@ -1,0 +1,82 @@
+section h2{
+    color: black;
+    text-align: left;
+    width: 99.3%;
+    height: 1.5em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: darkgray;
+}
+
+section{
+    text-align: left;
+    color: black;
+    border-radius: 0.5em;
+    background-color: #DDDDDD;
+}
+
+section a{
+    color: azure;
+}
+
+#myUpload{
+    padding-bottom: 2em;
+}
+
+#myUpload div{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 0;
+}
+
+#pageTurner{
+    position: relative;
+    left: 40%;
+}
+
+#pageTurner a{
+    color: indigo;
+    padding: 0 0.5em 0 0.5em;
+}
+
+#myUpload div>div{
+    display: inline-flex;
+    width: 92%;
+}
+
+#myUpload div div div{
+    display: block;
+    width: 30em;
+    border: none;
+}
+
+#myUpload h1{
+    margin: 0.5em;
+    font-size: 1.5em;
+    color: darkblue;
+}
+
+#myUpload p{
+    margin: 1em;
+}
+
+#myUpload img{
+    margin: 0.5em;
+}
+
+input[value="Modify"]{
+    color: azure;
+    background-color: darkblue;
+    border-radius: 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    margin-right: 1em;
+}
+
+input[value="Delete"]{
+    color: azure;
+    background-color: firebrick;
+    border-radius: 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    margin-right: 1em;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/icon.gif">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/head.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/search.css">
+    <script src="js/jquery-3.2.0.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/search.js"></script>
+    <title>Wanna To Travel</title>
+</head>
+<body>
+<header>
+    <form name="log" id="log"></form>
+    <nav>
+        <ul>
+            <li><img src="img/logo.png" id="logo" class="notPic"></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="browse.html">Browse</a></li>
+            <li class="chosen"><a href="search.html">Search</a></li>
+            <li id="account">
+                <ul id="login">
+                    <li><input type="email" id="emailBox" class="navtext" form="log" size="20" placeholder="E-mail"></li>
+                    <li><input type="password" id="passwordBox" class="navtext" form="log" placeholder="Password"></li>
+                    <li><a class="beforeLog" onclick="login()" id="loginButton" href="#">Login</a></li>
+                    <li><a class="beforeLog" href="register.html">Register</a></li>
+                </ul>
+            </li>
+            <li><a id="afterLog" onclick="account()" href="#">My Account▼</a></li>
+        </ul>
+    </nav>
+    <div id="accountMenu">
+        <ul>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="myphotos.html">My Photos</a></li>
+            <li><a href="favourite.html">Favourites</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </div>
+</header>
+<article>
+    <section id="searchStage">
+        <h2>Search</h2>
+        <div>
+        <input type="radio" id="titleRadio" name="filterRadio" checked>
+        <label for="titleRadio">Filter By Title</label>
+            <div>
+            <input type="text" id="titleBox">
+            </div>
+        </div>
+        <div>
+        <input type="radio" id="descriptionRadio" name="filterRadio">
+        <label for="descriptionRadio">Filter By Description</label>
+            <div>
+            <textarea></textarea>
+            </div>
+        </div>
+        <a id="filterButton">Filter</a>
+    </section>
+    <section id="resultStage">
+        <h2>Search Result</h2>
+        <div>
+        <div>
+            <img alt="img">
+            <div>
+            <h1></h1>
+            <p></p>
+            </div>
+        </div>
+        <div>
+            <img alt="img">
+            <div>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <div>
+            <img alt="img">
+            <div>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <div>
+            <img alt="img">
+            <div>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <div>
+            <img alt="img">
+            <div>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+            <div id="pageTurner">
+                <a href="#pageTurner">◀</a>
+                <a href="#pageTurner">1</a>
+                <a href="#pageTurner">2</a>
+                <a href="#pageTurner">3</a>
+                <a href="#pageTurner">4</a>
+                <a href="#pageTurner">5</a>
+                <a href="#pageTurner">▶</a>
+            </div>
+        </div>
+    </section>
+</article>
+<footer>
+    <hr/>
+    <span>90's Black Humour &copy All rights Reserved</span>
+    <a href="#">Back To The Top</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+body{
+
+}
+
+#loginBox{
+    margin-left: 40%;
+    margin-right: 30%;
+    text-align: left;
+}
+
+h1{
+    font-size: 1.5em;
+    color: #888888;
+}
+
+div input[type="email"], div input[type="password"]{
+    margin: 0;
+    width:20em;
+    height: 2em;
+}
+
+#info{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#remember{
+    display: inline-flex;
+    font-size: smaller;
+    color: #222222;
+}
+
+label{
+    margin-left: 0.5em;
+    position: relative;
+    bottom: 0.1em;
+}
+
+div *{
+    display: block;
+}
+
+#bodyLoginButton{
+    color: azure;
+    width: 3em;
+    padding: 0.5em;
+    bottom: 1em;
+    border-radius: 10px;
+    background-color: indigo;
+}

@@ -1,0 +1,106 @@
+section{
+    z-index:0;
+    text-align: left;
+    display: block;
+    position: relative;
+}
+
+div{
+    margin-bottom: 1em;
+}
+
+h1{
+    margin: 0.5em;
+  font-size: 2em;
+    font-weight: bold;
+}
+
+h2{
+    margin: 1em;
+    font-family: "Arial Narrow";
+}
+
+#pic{
+    height: 300px;
+    width: 450px;
+    margin: 10px;
+}
+
+#image{
+    border: 4px solid #222222;
+    margin-right: 120px;
+}
+
+#displayInfo{
+    display: inline-flex;
+    width: 500em;
+    margin: 50px;
+}
+
+div div div h3{
+    cursor: pointer;
+    color: black;
+    text-align: left;
+    font-size: 0.8em;
+    height: 1em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: darkgray;
+}
+
+div div div{
+    border-radius: 0.5em 0.5em 0 0;
+    display: block;
+    width: 200%;
+    background-color: #DDDDDD;
+    margin: 1em;
+    text-align: left;
+    padding-bottom: 0.5em;;
+}
+
+div div div p{
+    margin: 0.5em;
+}
+
+#addFavourite{
+    background-color: darkslateblue;
+    text-align: center;
+    padding-top: 0.5em;
+    border-radius: 0.5em;
+}
+
+#addFavourite a{
+    color: azure;
+}
+
+#addFavourite a:visited{
+    content: "Favourite";
+}
+
+#likeNum{
+    background-color: transparent;
+    color: midnightblue;
+    text-align: center;
+}
+
+#likeNum h3{
+    text-align: center;
+    background-color: transparent;
+    color: darkslateblue;
+    font-size: large;
+}
+
+#likeNum p{
+    font-size: 1.25em;
+    font-weight: bolder;
+}
+
+#description{
+    margin-left: 1em;
+    min-height: 3em;
+    height: auto;
+    width: 90%;
+    border: 1px solid #dddddd;
+}

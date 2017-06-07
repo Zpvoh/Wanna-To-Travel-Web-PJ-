@@ -1,0 +1,160 @@
+
+figure{
+    font-size: 0.8em;
+    color: darkblue;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    padding: 1em 1em 1em 1em;
+    width: 30%;
+}
+
+#logo{
+    border-radius: 0.6em;
+    margin-right: 0.5em;
+    position: relative;
+    bottom: 0.8em;
+    left: 0.5em;
+    height: 60px;
+    width: 60px;
+}
+
+header{
+    padding: 2em 0 2em 0;
+    text-align: left;
+}
+
+nav{
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+    vertical-align: middle;
+    background-color: navy;
+    display: list-item;
+    list-style-type: none;
+}
+
+nav:hover{
+    cursor: hand;
+}
+
+nav ul{
+    margin-left: 0.5em;
+    height: 2em;
+    width: 500px;
+    color: azure;
+    font-weight: bold;
+}
+
+nav a{
+    color: azure;
+    font-weight: bold;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+nav li{
+    height: 2em;
+    line-height: 2em;
+    border-radius: 5px 5px 5px 5px;
+    vertical-align: middle;
+    display: inline-flex;
+    margin-right: 1em;
+    text-align: center;
+    list-style-type: none;
+}
+
+nav a:hover{
+    cursor: hand;
+    color: aqua;
+    border-radius: 5px 5px 5px 5px;
+    background-color: darkslateblue;
+}
+
+#account{
+    position: absolute;
+    right: 200px;
+    width: 25em;
+    text-align: center;
+}
+
+#login{
+    position: relative;
+    right:0em;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="search"], textarea, input[type="number"]{
+    border-radius: 5px;
+    border: 2px solid #eeeeee;
+    font-family: Arial;
+}
+
+.navtext{
+    position: relative;
+    bottom: 0.8em;
+    line-height: 0em;
+    width: 5em;
+    height: 50%;
+}
+
+
+.beforeLog{
+    position: relative;
+    bottom: 0.15em;
+}
+
+#afterLog{
+    display: none;
+    position: absolute;
+    right:210px;
+}
+
+#afterLog:hover{
+
+}
+
+#accountMenu{
+    z-index: 1;
+    padding-left: 1em;
+    padding-right: 0.5em;
+    display: none;
+    color: azure;
+    background-color: midnightblue;
+    box-shadow: -3px 3px 3px black;
+    position: absolute;
+    right: 210px;
+    line-height: 2em;
+    font-size: small;
+}
+
+#accountMenu a{
+    color: azure;
+}
+
+#accountMenu li{
+    list-style-type:none;
+}
+
+.chosen{
+    height: 2em;
+    background-color: dodgerblue;
+    box-shadow: 0.2em 0.2em 0.5em darkgreen;
+}
+
+figcaption{
+    margin: 1em 1em 1em 1em;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+footer{
+    margin-top: 100px;
+    font-family: "Goudy Old Style";
+    font-size: smaller;
+    text-align: left;
+}
+
+footer a{
+    margin: 2em;
+    font-family: Calibri;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+

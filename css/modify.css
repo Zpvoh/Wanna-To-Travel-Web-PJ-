@@ -1,0 +1,50 @@
+section{
+    border-bottom: 2px solid #eeeeee;
+    text-align: left;
+}
+
+section h2{
+    text-align: left;
+    height: 1.5em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 80%;
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: darkgray;
+}
+
+section form{
+    margin: 0;
+}
+
+form>div{
+    width: 99.7%;
+    border: 2px solid #eeeeee;
+    border-bottom: none;
+    background-color: #DDDDDD;
+}
+
+label{
+    margin-left: 1em;
+    font-family: "Arial Black";
+    font-size: 0.8em;
+}
+
+#photo{
+    margin: 1em;
+}
+
+section input:not([type="submit"]), textarea{
+    width: 70%;
+    margin: 1em;
+}
+
+input[type="submit"]{
+    margin: 1em;
+    color: azure;
+    padding: 0.5em;
+    margin: 0.5em;
+    bottom: 1em;
+    border-radius: 10px;
+    background-color: indigo;
+}

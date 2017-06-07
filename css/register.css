@@ -1,0 +1,53 @@
+section{
+
+    border-bottom: 2px solid #eeeeee;
+    text-align: left;
+}
+
+section h2{
+    text-align: left;
+    height: 1.5em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 90%;
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: darkgray;
+}
+
+section form{
+    margin: 0;
+}
+
+form>div{
+    display: inline-flex;
+    width: 99.7%;
+    border: 2px solid #eeeeee;
+    border-bottom: none;
+    background-color: #DDDDDD;
+}
+
+.title{
+    width: 12%;
+    margin-right: 0;
+    margin-top: 1em;
+}
+
+section label{
+    position: relative;
+    width: 10em;
+    margin-left: 0.5em;
+}
+
+section input[type="email"],section input[type="password"],section input[type="text"]{
+    width: 50%;
+    cursor: pointer;
+}
+
+#submit{
+    color: azure;
+    padding: 0.5em;
+    margin: 0.5em;
+    bottom: 1em;
+    border-radius: 10px;
+    background-color: indigo;
+}

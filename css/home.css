@@ -1,0 +1,111 @@
+#showStage{
+    position: relative;
+    z-index: 0;
+}
+
+#display{
+    margin:0 0 0 0;
+    height: 30em;
+    width: 100%;
+    z-index: 1;
+}
+
+#showDescription{
+    color: aliceblue;
+    background-color: rgba(0,0,139,0.7);
+    position: relative;
+    bottom: 100px;
+    right: 0;
+    font-size: 200%;
+    padding: 1em 1em 1em 1em;
+}
+
+.arrow{
+    opacity: 0.6;
+    position: absolute;
+    height: 5em;
+    width: 2em;
+    float: none;
+    z-index: 2;
+}
+
+.arrow:hover{
+    opacity: 1;
+}
+
+#left{
+    top: 180px;
+    left: 10px;
+}
+
+#right{
+    top: 180px;
+    right: 40px;
+}
+
+#choose{
+    position: absolute;
+    top:1%;
+    left: 48%;
+}
+
+#choose input{
+    display: none;
+}
+
+#choose img{
+    width: 10px;
+    height: 10px;
+}
+
+#recommendStage{
+    display: block;
+    position: relative;
+}
+
+#recommendStage div p a{
+    border-radius: 3px;
+    position: relative;
+    top: 1em;
+    padding: 0.25em 0.2em 0.25em 0.2em;
+    color: aliceblue;
+    background-color: gray;
+}
+
+#recommendStage div>div{
+    display: inline-flex;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#uploadStage{
+    position: relative;
+}
+
+.refresh {
+    position: absolute;
+    left: 25%;
+    text-align: center;
+    border-radius: 0.5em;
+    background-color: #DDDDDD;
+    height: 2em;
+    width: 50%;
+    color: #222222;
+
+}
+
+.refresh a{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top:25%
+}
+
+#uploadStage div{
+    position: relative;
+    top:4em
+}
+
+#uploadStage div img{
+    margin: 0.1em;
+}

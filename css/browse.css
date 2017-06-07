@@ -1,0 +1,48 @@
+body{
+    display: block;
+}
+
+section{
+    margin: 1em 0em 1em 0em;
+    border-radius: 0.5em;
+    background-color: #dddddd;
+}
+
+#accountMenu{
+    z-index: 2;
+}
+
+section h2{
+    text-align: left;
+    height: 1.5em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 90%;
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: darkgray;
+}
+
+#filterStage{
+    position: relative;
+    height: 67em;
+    z-index: 1;
+}
+
+#filterStage img{
+    margin: 1em;
+}
+
+#pageTurner{
+    display: inline-flex;
+    margin: 0 12em 0 12em;
+}
+
+#pageTurner a{
+    color: indigo;
+    padding: 0 0.5em 0 0.5em;
+}
+
+
+
+
+

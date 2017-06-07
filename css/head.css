@@ -1,0 +1,22 @@
+body{
+    padding-left: 200px;
+    padding-right: 200px;
+    text-align: center;
+    font-family: Arial;
+    background-color: #fefefe;
+}
+
+*{
+
+    margin: 1em 0em 1em 0em;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:active{
+    color: darkblue;
+}

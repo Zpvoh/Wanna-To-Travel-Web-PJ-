@@ -1,0 +1,73 @@
+1;6592902825.jpg;Edworthy Park;Calgary Children's Hospital from Edworthy Park;51.06;-114.15;5913490;CA;Richard Cunningham
+2;6592914823.jpg;Calgary Downtown;Calgary Downtown from Edworthy Park;51.06;-114.15;5913490;CA;Richard Cunningham
+3;6592317633.jpg;Grace Presbyterian Church;Calgary Beltline during the first snowfall of the season;51.03;-114.08;5913490;CA;François Tremblay
+4;6592294487.jpg;Along the Bow River;Along the Bow River in downtown Calgary;51.05;-114.08;5913490;CA;François Tremblay
+5;6114904363.jpg;Ascending Sulpher Mountain;First time using HDR with 2 stop bracketing composed in PhotoMatix Pro 4.1;51.14;-115.55;5892532;CA;François Tremblay
+6;6114907897.jpg;At top of Sulpher Mountain;At top of Sulpher Mountain near Banff;51.14;-115.57;5892532;CA;Leonie Köhler
+7;5856697109.jpg;Lunenburg Port;On board a small sailing ship leaving Lunenburg;44.37;-64.30;6062069;CA;Leonie Köhler
+8;5856658791.jpg;Central United Church;;44.37;-64.30;6062069;CA;Robert Brown
+13;6596048341.jpg;Central Park;Conservatory Pond in Central Park New York;40.77;-73.96;5128581;US;Robert Brown
+14;6596046267.jpg;Rockefeller Center;;40.75;-73.97;5128581;US;Madalena Sampaio
+15;5855174537.jpg;Albert Hall;;51.50;-0.17;2643743;GB;Madalena Sampaio
+16;5855735700.jpg;Emirates Stadium;Home to Arsenal FC;51.55;-0.10;2643743;GB;François Tremblay
+17;5855191275.jpg;Westminister Abbey;;51.49;-0.12;2643743;GB;François Tremblay
+18;5855752464.jpg;Wellington's Arch;The top of Wellington's Arch has this sculptural grouping;51.50;-0.15;2643743;GB;Robert Brown
+19;5855729828.jpg;British Museum;The library in the British Museum in London;51.51;-0.12;2643743;GB;Robert Brown
+20;5855774224.jpg;Castle at Battle, UK;Entrance way to the Battle of Hasting's site in Battle, UK;50.91;0.48;2656161;GB;Madalena Sampaio
+21;5855221959.jpg;Lewes Castle;Built in 1069, the castle has a tremendous view of the town of Lewes and the surrounding countryside.;50.87;8.259e-03;2644559;GB;Madalena Sampaio
+22;6114850721.jpg;View of Cologne;View of Cologne from atop the Cologne Cathedral;50.94;6.95;2886242;DE;Madalena Sampaio
+23;6114859969.jpg;Prinz-Georg Garten;;49.87;8.65;2938913;DE;Jack Smith
+24;6114960821.jpg;Downtown Frankfurt;Downtown Frankfurt from the Frankfurt Cathedral;50.11;8.68;2925533;DE;Jack Smith
+25;6114881215.jpg;Brandenburg Gate, Berlin;;52.51;13.37;2950159;DE;Richard Cunningham
+26;6115603234.jpg;Outside the Berliner Dom;;52.51;13.39;2950159;DE;Richard Cunningham
+27;6114867983.jpg;New National Gallery, Ber;Exterior of the Mies van der Rohe designed New National Gallery;52.50;13.36;2950159;DE;Camille Bernard
+28;6115548152.jpg;Checkpoint Charlie;;52.50;13.39;2950159;DE;Camille Bernard
+29;5855209453.jpg;Plaza de Cibeles, Madrid;;40.41;-3.69;3117735;ES;Camille Bernard
+30;5855213165.jpg;Santiago Bernabeu, Madrid;Home stadium for Real Madrid;40.45;-3.68;3117735;ES;Camille Bernard
+31;6119127716.jpg;Paradise Island in Nassau;Photographed from Atlantis Bridge. Paradise Island in Nassau, Bahamas;25.07;-77.32;3571824;BS;Robert Brown
+33;6119143988.jpg;Disney Coronado Resort;;28.36;-81.57;4167147;US;Richard Cunningham
+36;8152045688.jpg;Cape Coast;;5.10;-1.24;2302357;GH;Jack Smith
+37;8152045872.jpg;Cape Coast;;5.10;-1.24;2302357;GH;Jack Smith
+38;8152020963.jpg;Cape Coast;;5.10;-1.24;2302357;GH;Robert Brown
+40;222222.jpg;Florence;;43.76;11.25;3176959;IT;Martha Silk
+41;222223.jpg;Milan;;45.44;9.20;3173435;IT;Martha Silk
+42;9493997865.jpg;Verona Building Art;Verona Building Art;45.44;10.99;3164527;IT;Martha Silk
+43;9496787858.jpg;Verona Ponte Scaligero;;45.44;10.98;3164527;IT;Terhi Hämäläinen
+44;9496792166.jpg;Verona Piazza Bra at Night;;45.43;10.99;3164527;IT;Terhi Hämäläinen
+45;9496799098.jpg;Verona;Near Ponte Nuovo;45.44;11.00;3164527;IT;Terhi Hämäläinen
+46;9494282329.jpg;Prato della Valle;Prato della Valle in Padova;45.39;11.87;3171728;IT;Madalena Sampaio
+47;9494475161.jpg;St Marks Square in Venice;;45.43;12.33;3164603;IT;Puja Srivastava
+48;9494472443.jpg;Santa Maria della Salute, Venice;;45.43;12.33;3164603;IT;Puja Srivastava
+49;9494464567.jpg;Venice View From Ponte di Rialto;;45.43;12.33;3164603;IT;Leonie Köhler
+50;9494470337.jpg;Venice;;45.43;12.32;3164603;IT;Terhi Hämäläinen
+51;9496560520.jpg;Montepulciano;;43.09;11.78;3172794;IT;Leonie Köhler
+52;9498368556.jpg;Arch of Constantine;view from within the Colosseum;41.88;12.49;3169070;IT;Madalena Sampaio
+53;9495571869.jpg;Inside the Colosseum;;41.89;12.49;3169070;IT;Isabelle Mercier
+54;9495574327.jpg;Arch of Septimus Severus;In the Roman Forum;41.89;12.48;3169070;IT;Isabelle Mercier
+55;9498381010.jpg;Palatine Hill;Walking up the via di San Gregorio side of the Hill;41.88;12.48;3169070;IT;Madalena Sampaio
+56;9498386718.jpg;From St. Peters;;41.90;12.45;3169070;IT;Isabelle Mercier
+57;9498388516.jpg;Temple of Asclepius;In the Villa Borghese Park;41.91;12.48;3169070;IT;Isabelle Mercier
+58;9498358806.jpg;Florence Duomo;Photo taken from the Campanile;43.77;11.25;3176959;IT;Terhi Hämäläinen
+59;9504606628.jpg;Orpheus Fountain, Florence;In the garden of Palazzo Vivarelli Colonna;43.76;11.26;3176959;IT;Isabelle Mercier
+60;9504609042.jpg;Pazzi Chapel at Santa Croce;By Filippo Brunelleschi, the chapel is considered to be one of the masterpieces of Renaissance architecture. It is located in the first cloister of the Basilica di Santa Croce.Filippo Brunelleschi designed church has been called by Bernini the most beautiful church in the world.;43.76;11.26;3176959;IT;Manoj Pareek
+61;9504613978.jpg;Palazzo Strozzi, Florence;;43.77;11.25;3176959;IT;Terhi Hämäläinen
+62;9504451722.jpg;Interior Santo Spirito, Florence;Filippo Brunelleschi designed church has been called by Bernini the most beautiful church in the world. I have to concur with the master, it is beyond stunning.;43.76;11.24;3176959;IT;Martha Silk
+63;9504449928.jpg;Santo Spirito, Florence;;43.76;11.24;3176959;IT;Martha Silk
+64;9504448540.jpg;Garden of Boboli, Pitti Palace, Florence;;43.76;11.25;3176959;IT;Martha Silk
+65;9504445110.jpg;Santa Maria Novella, Florence;;43.77;11.24;3176959;IT;Puja Srivastava
+66;9505536014.jpg;Camposanto, Pisa;;43.72;10.39;3170647;IT;Puja Srivastava
+67;9502740177.jpg;Cathedral, Pisa;;43.72;10.39;3170647;IT;Leonie Köhler
+68;9502741759.jpg;Pisa Cathedral from Leaning Tower;;43.72;10.39;3170647;IT;Terhi Hämäläinen
+69;9505893300.jpg;San Michele in Foro, Lucca;;43.84;10.50;3174530;IT;Terhi Hämäläinen
+70;9505897492.jpg;Basilica of San Frediano, Lucca;;43.84;10.50;3174530;IT;Martha Silk
+71;8730408907.jpg;Matthias Church;Official name is "Church of the Blessed Virgin in Buda". Central part of church built around 1400, with additions by Turks, and then Baroque-era modifications, finally redone in late 19th Century in neo-Gothic revival. Very much a masterpiece of European eclecticism, though some say it is an over-decorated piece of stage scenery.;47.50;19.03;3054643;HU;Isabelle Mercier
+72;8731523536.jpg;St. Stephen's Cathedral;;47.50;19.05;3054643;HU;Isabelle Mercier
+73;8710320515.jpg;Ekklisia Agii Isidori church;At the top of the Lycabettus Hill;37.98;23.74;264371;GR;Isabelle Mercier
+74;8711645510.jpg;Temple of Hephaistos;Located on western perimeter of Agora in Athens. Built in 460-415 BCE, it is the best preserved temple of antiquity.;37.97;23.72;264371;GR;Isabelle Mercier
+75;8710513053.jpg;Ancient Theatre of Dionysos;On south bank of Acropolis;37.97;23.72;264371;GR;Isabelle Mercier
+76;8711623884.jpg;Roman Agora;;37.97;23.72;264371;GR;Isabelle Mercier
+77;8710247776.jpg;Dusk on Imerovigli (Santorini);Looking towards Imerovigli, a village devoted to the appreciation of the sunset!;36.42;25.42;252920;GR;Manoj Pareek
+78;8710289254.jpg;Looking towards Fira;;36.42;25.42;252920;GR;Manoj Pareek
+80;8731526170.jpg;Gresham Palace;Built in early 20th century and originally the headquarters for an English insurance company. Nationalized after the war, it was turned into a Four Season's Hotel after a 100 million dollar renovation from 2000-2004. Evidently one of the world's swankiest hotels. It overlooks Roosevelt Square and the Chain Bridge.;47.49;19.04;3054643;HU;Isabelle Mercier
+81;8645912379.jpg;Christ Church College, Oxford;;51.74;-1.25;2640729;GB;Manoj Pareek
+82;8646991554.jpg;Cloisters, New College, Oxford;;51.75;-1.25;2640729;GB;Manoj Pareek
