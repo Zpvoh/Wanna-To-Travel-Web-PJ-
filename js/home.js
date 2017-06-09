@@ -5,7 +5,7 @@ var slideXhr=new XMLHttpRequest();
 var recommendXhr=new XMLHttpRequest();
 var uploadXhr=new XMLHttpRequest();
 var index = 2;
-window.onload = function () {
+window.addEventListener("load", function () {
     slideSendRequest(index+1);
     initialPics();
     recommendPicDisplay();
@@ -26,32 +26,15 @@ window.onload = function () {
     _accountMenu.hide();
 
 
-};
-
-function changeDemand(name, value) {
-    return encodeURIComponent(name)+"="+encodeURIComponent(value);
-}
-
-function bindDemands() {
-    var str="";
-    for(var index in arguments){
-        if(index!=arguments.length-1){
-            str=str+arguments[index]+"&";
-        }else{
-            str=str+arguments[index];
-        }
-    }
-
-    return str;
-}
+});
 
 function slideSendRequest(id) {
     slideXhr.open("get", "php/findThePic.php?"+changeDemand("ImageID", id), true);
     slideXhr.send(null);
 }
 
-function recommendSendRequest(table, condition) {
-    recommendXhr.open("get", "php/findSomePics.php?"+bindDemands(changeDemand("Table", table), changeDemand("Condition",condition)), true);
+function recommendSendRequest(start, end) {
+    recommendXhr.open("get", "php/getRatingList.php?"+bindDemands(changeDemand("start", start), changeDemand("end", end)), true);
     recommendXhr.send(null);
 }
 
@@ -161,14 +144,15 @@ function recommendPicDisplay() {
     var recommendRefresh=document.getElementById("recommendRefresh");
     var recommendStage=document.getElementById("recommendStage");
     var recommendPics=recommendStage.getElementsByTagName("figure");
-    recommendSendRequest("travelimagerating", "Rating=5");
+    recommendSendRequest(0, 6);
     recommendXhr.addEventListener("load", function () {
-        var imageArray=analyzeFindSomePics(recommendXhr.responseText);
+        var imageArray=JSON.parse(recommendXhr.responseText);
+        console.log(imageArray);
         for(var i=0; i<recommendPics.length; i++){
-            var id=imageArray[i][0][0][0];
-            var path=imageArray[i][0][0][2];
-            var title=imageArray[i][1][0][1];
-            var description=imageArray[i][1][0][2];
+            var id=imageArray[i]['id'];
+            var path=imageArray[i]['path'];
+            var title=imageArray[i]['title'];
+            var description=imageArray[i]['description'];
             var img=recommendPics[i].getElementsByTagName("img")[0];
             var titleElement=recommendPics[i].getElementsByTagName("figcaption")[0];
             var descriptionElement=recommendPics[i].getElementsByTagName("p")[0];

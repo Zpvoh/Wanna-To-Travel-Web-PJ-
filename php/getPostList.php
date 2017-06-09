@@ -15,7 +15,7 @@ $index=0;
 
 while ($rowPost=$rsPost->fetch_assoc()){
     $postID=$rowPost["PostID"];
-    $rsPostImages=$db->query("select ImageID from travelpostimages WHERE PostID={$postID}");
+    $rsPostImages=$db->query("select ImageID from travelpostimages WHERE PostID={$postID} limit {$_GET["Number"]}");
     while ($rowPostImages=$rsPostImages->fetch_assoc()){
         $imagesList[$index]=$rowPostImages["ImageID"];
         $rsImagePath=$db->query("select Path from travelimage where ImageID={$imagesList[$index]}");

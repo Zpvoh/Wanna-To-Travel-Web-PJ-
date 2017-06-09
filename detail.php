@@ -1,8 +1,5 @@
 <?php
-include_once "php/findPicAlgorithm.php";
-
-echo $path;
-
+include_once("php/findPicAlgorithm.php")
 ?>
 
 <!DOCTYPE html>
@@ -20,39 +17,14 @@ echo $path;
     <title>Wanna To Travel</title>
 </head>
 <body>
-<header>
-    <form name="log" id="log"></form>
-    <nav>
-        <ul>
-            <li><img src="img/logo.png" id="logo" class="notPic"></li>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="browse.html">Browse</a></li>
-            <li><a href="search.html">Search</a></li>
-            <li id="account">
-                <ul id="login">
-                    <li><input type="email" id="emailBox" class="navtext" form="log" size="20" placeholder="E-mail"></li>
-                    <li><input type="password" id="passwordBox" class="navtext" form="log" placeholder="Password"></li>
-                    <li><a class="beforeLog" onclick="login()" id="loginButton" href="#">Login</a></li>
-                    <li><a class="beforeLog" href="register.html">Register</a></li>
-                </ul>
-            </li>
-            <li><a id="afterLog" onclick="account()" href="#">My Account▼</a></li>
-        </ul>
-    </nav>
-    <div id="accountMenu">
-        <ul>
-            <li><a href="upload.html">Upload</a></li>
-            <li><a href="myphotos.html">My Photos</a></li>
-            <li><a href="favourite.html">Favourites</a></li>
-            <li><a href="#" onclick="logout()">Logout</a></li>
-        </ul>
-    </div>
-</header>
+<?php
+    include_once "php/header.php";
+?>
 <article>
     <section>
         <div id="title">
-            <h1>hello</h1>
-            <h2>你好</h2>
+            <h1><?php echo $title ?></h1>
+            <h2><?php echo $name ?></h2>
         </div>
         <div id="displayInfo">
         <div id="image">
@@ -68,23 +40,21 @@ echo $path;
             </div>
             <div id="details">
                 <h3>Image Details</h3>
-                <p>Country:Italy</p>
-                <p>City:Pisa</p>
-                <p>Latitude:43.72</p>
-                <p>Longitude:10.39</p>
+                <p>Country:<?php echo $country ?></p>
+                <p>City:<?php echo $city ?></p>
+                <p>Latitude:<?php echo $latitude ?></p>
+                <p>Longitude:<?php echo $longitude ?></p>
             </div>
         </div>
         </div>
         <div>
-            <p id="description">Description</p>
+            <p id="description"><?php echo $description ?></p>
         </div>
     </section>
 </article>
-<footer>
-    <hr/>
-    <span>90's Black Humour &copy All rights Reserved</span>
-    <a href="#">Back To The Top</a>
-</footer>
+<?php
+    include_once "php/footer.php";
+?>
 
 </body>
 </html>
