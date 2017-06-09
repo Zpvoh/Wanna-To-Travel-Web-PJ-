@@ -13,6 +13,7 @@ window.addEventListener("load", function () {
     uploadPicDisplay();
     initialImgHref();
     recommendClick();
+    uploadClick();
     var leftArrow=document.getElementById("left");
     leftArrow.addEventListener("click", onLeft, false);
     slideXhr.addEventListener("load", function () {
@@ -213,7 +214,12 @@ function recommendClick() {
 }
 
 function uploadClick() {
+    var newUpload=document.getElementById("newUpload");
+    newUpload.style.cursor="pointer";
 
+    newUpload.addEventListener("click", function () {
+        uploadPicDisplay();
+    }, true);
 }
 
 function initialViewDetail() {
