@@ -10,10 +10,12 @@ include_once "connectDatabase.php";
 $email=$_POST['email'];
 $password=$_POST['password'];
 
-$rsUser=$db->query("select Pass, UID from traveluser where UserName='{$email}'");
+$rsUID=$db->query("select UID from traveluserdetails where Email='{$email}'");
+$uid=$rsUID->fetch_assoc()['UID'];
+$rsUser=$db->query("select Pass from traveluser where UID='{$uid}'");
 $rowPass=$rsUser->fetch_assoc();
 if(isset($rowPass['Pass']) && $password===$rowPass['Pass']){
-    echo $rowPass['UID'];
+    echo $uid;
 }else{
     echo "NOT PASS";
 }

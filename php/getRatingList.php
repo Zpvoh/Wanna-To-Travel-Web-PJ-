@@ -28,3 +28,5 @@ while ($rowRating=$rsRatingList->fetch_assoc()){
 }
 
 echo json_encode($all);
+
+$db->close();

@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
     var afterLog = document.getElementById("afterLog");
     console.log(document.cookie);
     var cookieArray=analyzeCookie(document.cookie);
-    if(cookieArray['UID']!==undefined){
+    if(cookieArray['UID']!==undefined && cookieArray['UID']!==""){
         login.style.display = "none";
         afterLog.style.display = "inline";
     }
@@ -130,6 +130,7 @@ function login() {
             document.cookie+="UID="+response+"; expires="+expireTime.toUTCString();
         } else {
             alert("Please check your input. There is something wrong.");
+
         }
     };
 

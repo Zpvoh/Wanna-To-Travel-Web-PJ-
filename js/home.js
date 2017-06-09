@@ -5,12 +5,14 @@ var slideXhr=new XMLHttpRequest();
 var recommendXhr=new XMLHttpRequest();
 var uploadXhr=new XMLHttpRequest();
 var index = 2;
+var recommendIndex=0;
 window.addEventListener("load", function () {
     slideSendRequest(index+1);
     initialPics();
     recommendPicDisplay();
     uploadPicDisplay();
     initialImgHref();
+    recommendClick();
     var leftArrow=document.getElementById("left");
     leftArrow.addEventListener("click", onLeft, false);
     slideXhr.addEventListener("load", function () {
@@ -144,7 +146,7 @@ function recommendPicDisplay() {
     var recommendRefresh=document.getElementById("recommendRefresh");
     var recommendStage=document.getElementById("recommendStage");
     var recommendPics=recommendStage.getElementsByTagName("figure");
-    recommendSendRequest(0, 6);
+    recommendSendRequest(recommendIndex*6, (recommendIndex+1)*6);
     recommendXhr.addEventListener("load", function () {
         var imageArray=JSON.parse(recommendXhr.responseText);
         console.log(imageArray);
@@ -198,13 +200,20 @@ function initialPics() {
 
 function recommendClick() {
     var recommendRefresh=document.getElementById("recommendRefresh");
-    var recommendStage=document.getElementById("recommendStage");
-    var recommendPics=recommendStage.getElementsByTagName("figure");
     recommendRefresh.style.cursor="pointer";
 
     recommendRefresh.onclick=function () {
-
+        if(recommendIndex==2){
+            recommendIndex=0;
+        }else{
+            recommendIndex++;
+        }
+        recommendPicDisplay();
     }
+}
+
+function uploadClick() {
+
 }
 
 function initialViewDetail() {

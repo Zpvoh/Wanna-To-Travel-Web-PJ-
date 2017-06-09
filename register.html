@@ -44,27 +44,27 @@
 <article>
     <section>
     <h2>Register</h2>
-    <form name="reg" id="reg">
+    <form name="reg" id="reg" action="php/appendUser.php" method="post">
         <div>
             <div class="title">
                 <label for="regEmailBox">E-mail Address</label>
             </div>
-        <input type="email" id="regEmailBox">
+        <input type="email" id="regEmailBox" name="email">
         </div>
         <div>
             <div class="title">
             <label for="regPasswordBox">Password</label>
             </div>
-        <input type="password" id="regPasswordBox">
+        <input type="password" id="regPasswordBox" name="password">
         </div>
         <div>
             <div class="title">
             <label for="regPasswordBox">Username</label>
             </div>
-            <input type="text" id="regUsernameBox">
+            <input type="text" id="regUsernameBox" name="username">
         </div>
         <div>
-            <a href="#" id="submit" onclick="login()">Submit</a>
+            <input type="button" value="Submit" id="submit">
         </div>
     </form>
     </section>

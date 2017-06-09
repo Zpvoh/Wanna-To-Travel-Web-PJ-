@@ -31,7 +31,7 @@
         <a class="arrow" id="right"><img alt="img" class="arrow notPic" src="img/arrowright.png" onclick="onRight()"></a>
     </section>
     <section id="recommendStage">
-        <p class="refresh"><a href="#recommendStage" id="recommendRefresh">Other Hot Recommend <img src="img/refresh.png" width="15" height="15" class="notPic"></a></p>
+        <p class="refresh"><a id="recommendRefresh">Other Hot Recommend <img src="img/refresh.png" width="15" height="15" class="notPic"></a></p>
         <div id="recommendImages">
             <div>
 
@@ -42,7 +42,7 @@
         </div>
     </section>
     <section id="uploadStage">
-        <p class="refresh"><a href="#" id="newUpload">New Upload <img src="img/refresh.png" width="15" height="15" class="notPic"></a></p>
+        <p class="refresh"><a id="newUpload">New Upload <img src="img/refresh.png" width="15" height="15" class="notPic"></a></p>
         <div>
             <p>
 
