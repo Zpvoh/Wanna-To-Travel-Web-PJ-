@@ -117,6 +117,16 @@ function login() {
     var emailValue = email.value;
     var passwordValue = password.value;
 
+    if(emailValue=="" || passwordValue==""){
+        alert("Need Value!");
+        return;
+    }
+
+    if(!emailValue.match(/^[a-z|0-9]+@([a-z0-9]+\.)+[a-z]{2,}$/i)){
+        alert("You should input an email address!");
+        return;
+    }
+
     xhr.open("post", "php/verify.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send(bindDemands(changeDemand("email", emailValue), changeDemand("password", passwordValue)));

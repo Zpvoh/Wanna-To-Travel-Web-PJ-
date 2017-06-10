@@ -4,7 +4,7 @@
     <nav>
         <ul>
             <li><img src="../img/logo.png" id="logo" class="notPic"></li>
-            <li class="chosen"><a href="../home.php">Home</a></li>
+            <li class="chosen"><a href="../home.html">Home</a></li>
             <li><a href="../browse.html">Browse</a></li>
             <li><a href="../search.html">Search</a></li>
             <li id="account">

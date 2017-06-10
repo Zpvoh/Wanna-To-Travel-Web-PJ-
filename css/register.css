@@ -38,6 +38,15 @@ section label{
     margin-left: 0.5em;
 }
 
+.tip{
+    margin-left: 1em;
+    margin-top: 1.2em;
+    font-size: small;
+    font-family: Arial;
+    font-weight: bold;
+    color: darkred;
+}
+
 section input[type="email"],section input[type="password"],section input[type="text"]{
     width: 50%;
     cursor: pointer;

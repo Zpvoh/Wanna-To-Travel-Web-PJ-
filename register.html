@@ -18,7 +18,7 @@
     <nav>
         <ul>
             <li><img src="img/logo.png" id="logo" class="notPic"></li>
-            <li><a href="home.php">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="browse.html">Browse</a></li>
             <li><a href="search.html">Search</a></li>
             <li id="account">
@@ -50,18 +50,21 @@
                 <label for="regEmailBox">E-mail Address</label>
             </div>
         <input type="email" id="regEmailBox" name="email">
+            <div class="tip" id="emailTip"></div>
         </div>
         <div>
             <div class="title">
             <label for="regPasswordBox">Password</label>
             </div>
         <input type="password" id="regPasswordBox" name="password">
+            <div class="tip" id="passwordTip"></div>
         </div>
         <div>
             <div class="title">
             <label for="regPasswordBox">Username</label>
             </div>
             <input type="text" id="regUsernameBox" name="username">
+            <div class="tip" id="usernameTip"></div>
         </div>
         <div>
             <input type="button" value="Submit" id="submit">
