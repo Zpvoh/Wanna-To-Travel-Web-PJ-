@@ -23,13 +23,25 @@ $cityCode=$rowDetail["CityCode"];
 $countryCodeISO=$rowDetail["CountryCodeISO"];
 
 $rsUser=$db->query("select FirstName, LastName from traveluserdetails WHERE UID={$uid}");
-$rowUser=$rsUser->fetch_assoc();
-$name=$rowUser['FirstName']." ".$rowUser['LastName'];
+if($rsUser) {
+    $rowUser = $rsUser->fetch_assoc();
+    $name = $rowUser['FirstName'] . " " . $rowUser['LastName'];
+}else{
+    $name="Nameless";
+}
 
 $rsCities=$db->query("select AsciiName from geocities where GeoNameID={$cityCode}");
-$rowCities=$rsCities->fetch_assoc();
-$city=$rowCities['AsciiName'];
+if($rsCities) {
+    $rowCities = $rsCities->fetch_assoc();
+    $city = $rowCities['AsciiName'];
+}else{
+    $city="I don't know";
+}
 
 $rsCountries=$db->query("select CountryName from geocountries where ISO='{$countryCodeISO}'");
-$rowCountries=$rsCountries->fetch_assoc();
-$country=$rowCountries['CountryName'];
+if($rsCountries) {
+    $rowCountries = $rsCountries->fetch_assoc();
+    $country = $rowCountries['CountryName'];
+}else{
+    $country="I don't know";
+}

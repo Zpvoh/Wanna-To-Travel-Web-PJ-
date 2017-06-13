@@ -1,101 +1,265 @@
 /**
  * Created by qyy on 2017/3/26.
  */
-var photoArray;
 var page=1;
-window.onload = function () {
-    $(function () {
-        $.ajax({
-            url: 'img/photos.txt',
-            dataType: 'text',
-            success: function (content) {
-                photoArray = splitInfo(content);
-                initalFilter();
-            }
+var rowNum=5;
+var colomnNum=4;
+var totalPageNum=1;
+var filterXhr=new XMLHttpRequest();
+window.addEventListener("load",function () {
+    initialFilter(rowNum, colomnNum);
+    initialSelect();
+    filterPicsDisplay("AF", "continent", (page-1)*rowNum*colomnNum, page*rowNum*colomnNum);
+    initialImgHref();
+    initialFilterButton();
+    initialPageTurner();
+
+    pageTurnerTrans();
+});
+
+function filterSendRequest(name, type, start, end) {
+    filterXhr.open("get", "php/filter.php?"+bindDemands(changeDemand("type", type), changeDemand("name", name), changeDemand("start", start), changeDemand("end", end)));
+    filterXhr.send(null);
+}
+
+function initialFilter(pNum, imgNum) {
+    var filterStage=document.getElementById("filterStage");
+    var picsStage=document.getElementById("pics");
+
+    for(var i=0; i<pNum; i++){
+        var paragraph=document.createElement("p");
+
+        for(var j=0; j<imgNum; j++){
+            var img=document.createElement("img");
+            paragraph.appendChild(img);
+        }
+
+        picsStage.appendChild(paragraph);
+    }
+
+}
+
+function initialSelect() {
+    var city_sel=document.getElementById("city_sel");
+    var country_sel=document.getElementById("country_sel");
+    var continent_sel=document.getElementById("continent_sel");
+
+    fetch("php/filterSelect.php?type=get_continent_list").then(function(rsp) {
+        return rsp.text();
+    }).then(function(data) {
+        data = JSON.parse(data);
+
+        while (continent_sel.firstChild) {
+            continent_sel.removeChild(continent_sel.firstChild);
+        }
+        data.forEach(function(continent) {
+            var opt = document.createElement("option");
+            opt.setAttribute("value", continent.ContinentCode);
+            opt.appendChild(document.createTextNode(continent.ContinentName));
+            continent_sel.appendChild(opt);
         });
+
+        countryOptionChange(continent_sel.value);
+        cityOptionChange(country_sel.value);
     });
 
-    var _accountMenu=$('#accountMenu');
-    _accountMenu.hide();
+    function countryOptionChange(continent) {
+        fetch("php/filterSelect.php?type=get_country_list&continent="+continent).then(function(rsp) {
+            return rsp.text();
+        }).then(function(data) {
+            data = JSON.parse(data);
 
-    aclicked();
-    pageTurnerTrans();
-};
+            while (country_sel.firstChild) {
+                country_sel.removeChild(country_sel.firstChild);
+            }
 
-function initalFilter() {
-    var filterStage=document.getElementById("filterStage");
-    var imgArray=filterStage.getElementsByTagName("img");
-    for(var i=0; i<imgArray.length; i++){
-        imgArray[i].setAttribute("src", "img/travel-images/square-medium/"+photoArray[i][1]);
+            let optEmpty=document.createElement("option");
+            optEmpty.value="";
+            optEmpty.appendChild(document.createTextNode(""));
+            country_sel.appendChild(optEmpty);
+
+            data.forEach(function(country) {
+                let opt = document.createElement("option");
+                opt.setAttribute("value", country.ISO);
+                opt.appendChild(document.createTextNode(country.CountryName));
+                country_sel.appendChild(opt);
+            });
+
+            cityOptionChange(country_sel.value);
+        });
+
     }
+
+    function cityOptionChange(country) {
+        fetch("php/filterSelect.php?type=get_city_list&country="+country).then(function(rsp) {
+            return rsp.text();
+        }).then(function(data) {
+            data = JSON.parse(data);
+
+            while (city_sel.firstChild) {
+                city_sel.removeChild(city_sel.firstChild);
+            }
+
+            let optEmpty=document.createElement("option");
+            optEmpty.value="";
+            optEmpty.appendChild(document.createTextNode(""));
+            city_sel.appendChild(optEmpty);
+            data.forEach(function(city) {
+                let opt = document.createElement("option");
+                opt.setAttribute("value", city.GeoNameID);
+                opt.appendChild(document.createTextNode(city.AsciiName));
+                city_sel.appendChild(opt);
+            })
+        });
+    }
+
+    continent_sel.addEventListener("change", function () {
+        countryOptionChange(continent_sel.value);
+    }, true);
+    country_sel.addEventListener("change", function () {
+        cityOptionChange(country_sel.value);
+    }, true);
+}
+
+function initialFilterButton() {
+    var filterButton=document.getElementById("filterButton");
+
+    filterButton.addEventListener("click", function () {
+        page=1;
+        requestPic();
+    },true);
+}
+
+function initialPageTurner() {
+    if(totalPageNum<=5){
+        changePagination(1, totalPageNum);
+    }else{
+        changePagination(1,5);
+    }
+}
+
+function requestPic() {
+    var city_sel=document.getElementById("city_sel");
+    var country_sel=document.getElementById("country_sel");
+    var continent_sel=document.getElementById("continent_sel");
+    if(country_sel.value==""){
+        filterSendRequest(continent_sel.value, "continent", (page-1)*rowNum*colomnNum, page*rowNum*colomnNum);
+    }else if(city_sel.value==""){
+        filterSendRequest(country_sel.value, "country", (page-1)*rowNum*colomnNum, page*rowNum*colomnNum);
+    }else{
+        filterSendRequest(city_sel.value, "city", (page-1)*rowNum*colomnNum, page*rowNum*colomnNum);
+    }
+}
+
+function changePagination(start, end) {
+    var pages=document.getElementById("pages");
+
+        while(pages.firstChild){
+            pages.removeChild(pages.firstChild);
+        }
+
+        for(var i=start-1; i<end; i++){
+            var pageBt=document.createElement("a");
+            pageBt.id="page"+(i+1);
+            pageBt.dataset.index=i+1;
+            pageBt.style.cursor="pointer";
+            pageBt.innerText=i+1;
+            pageBt.addEventListener("click", function () {
+                var city_sel=document.getElementById("city_sel");
+                var country_sel=document.getElementById("country_sel");
+                var continent_sel=document.getElementById("continent_sel");
+                page=this.dataset.index;
+                resetPage(totalPageNum);
+                updatePage(page-1);
+                requestPic();
+            }, true);
+
+            pages.appendChild(pageBt);
+        }
+
+    resetPage(totalPageNum);
+    updatePage(page-1);
+}
+
+function filterPicsDisplay(name, type, start, end) {
+    var picsStage=document.getElementById("pics");
+    var imgs=picsStage.getElementsByTagName("img");
+
+    filterSendRequest(name, type, start, end);
+    filterXhr.onload=function () {
+        console.log(filterXhr.responseText);
+        var pics=JSON.parse(filterXhr.responseText.split("&")[0]);
+        for (var i=0; i<rowNum*colomnNum; i++) {
+            imgs[i].src = "";
+            imgs[i].dataset.imageid = 0;
+        }
+
+        if(pics.length!=0) {
+            for (var i in pics) {
+                imgs[i].src = "img/travel-images/square-medium/" + pics[i][1];
+                imgs[i].dataset.imageid = pics[i][0];
+            }
+        }
+
+        var picTotalNum=filterXhr.responseText.split("&")[1];
+        totalPageNum=parseInt(picTotalNum/(rowNum*colomnNum))+(picTotalNum%(rowNum*colomnNum)==0?0:1);
+        initialPageTurner();
+
+    };
 }
 
 function pageTurnerTrans() {
-    var pageTurner=document.getElementById("pageTurner");
-    var pageNum=pageTurner.getElementsByTagName("a");
-    resetPage();
-    updatePage(page);
-    for(var i=1;i<=5;i++){
-        pageNum[i].onclick=function (){
-            page=findPageIndex(event.srcElement);
-            resetPage();
-            updatePage(page);
-        };
-    }
+    var back=document.getElementById("back");
+    var forward=document.getElementById("forward");
 
-    pageNum[0].onclick=function () {
-        if(page>1) {
-            resetPage();
+    back.addEventListener("click", function () {
+        if(page!==1){
             page--;
-            updatePage(page);
-        }
-    };
+            if(page-5>0) {
+                changePagination(page-4, page);
+            }else if(page>0){
+                initialPageTurner();
+            }else{
+                page++;
+            }
 
-    pageNum[6].onclick=function () {
-        if(page<5) {
-            resetPage();
+            requestPic();
+        }
+    }, true);
+
+    forward.addEventListener("click", function () {
+        if(page!==totalPageNum){
             page++;
-            updatePage(page);
-        }
-    };
+            if(page+5<=totalPageNum){
+                changePagination(page,page+4);
+            }else{
+                    if (totalPageNum <= 5) {
+                        changePagination(1, totalPageNum);
+                    } else {
+                        changePagination(totalPageNum - 4, totalPageNum);
+                    }
+            }
 
-    page=1;
+            requestPic();
+        }
+    }, true);
 }
 
 function resetPage() {
-    var pageTurner=document.getElementById("pageTurner");
-    var pageNum=pageTurner.getElementsByTagName("a");
-    for(var j=1;j<=5;j++){
-        pageNum[j].style.color="indigo";
-        pageNum[j].style.backgroundColor="transparent";
+    var pages=document.getElementById("pages").getElementsByTagName("a");
+
+    for(var j=0;j<pages.length;j++){
+        pages[j].style.color="indigo";
+        pages[j].style.backgroundColor="transparent";
     }
 }
 
 function updatePage(index) {
-    var pageTurner=document.getElementById("pageTurner");
-    var pageNum=pageTurner.getElementsByTagName("a");
-    pageNum[index].style.backgroundColor="indigo";
-    pageNum[index].style.color="azure";
+    var pageChoose=document.getElementById("page"+(index+1));
+
+    pageChoose.style.backgroundColor="indigo";
+    pageChoose.style.color="azure";
 }
 
-function findPageIndex(elementPage) {
-    var pageTurner=document.getElementById("pageTurner");
-    var pageNum=pageTurner.getElementsByTagName("a");
-    for(var i=1;i<=5;i++){
-        if(elementPage==pageNum[i]){
-            return i;
-        }
-    }
-}
 
-function aclicked() {
-     var listStage=document.getElementById("listStage");
-     var ah=listStage.getElementsByTagName("a");
-     for(var i=0; i<ah.length; i++){
-         ah[i].onclick=function () {
-             event.srcElement.style.color="blue";
-         }
-     }
-
-}
 

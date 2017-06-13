@@ -15,6 +15,9 @@ window.addEventListener("load", function () {
         login.style.display = "none";
         afterLog.style.display = "inline";
     }
+
+    var _accountMenu=$('#accountMenu');
+    _accountMenu.hide();
 });
 
 function analyzeCookie(cookie) {

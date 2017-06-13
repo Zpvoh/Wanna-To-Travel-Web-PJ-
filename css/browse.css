@@ -24,8 +24,14 @@ section h2{
 
 #filterStage{
     position: relative;
-    height: 67em;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
     z-index: 1;
+}
+
+#filterStage select{
+    width: 10em;
+    margin-left: 1em;
 }
 
 #filterStage img{
@@ -39,6 +45,7 @@ section h2{
 
 #pageTurner a{
     color: indigo;
+    cursor: pointer;
     padding: 0 0.5em 0 0.5em;
 }
 

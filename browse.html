@@ -44,50 +44,24 @@
 <article>
     <section id="filterStage">
         <div>
-            <select>
+            <select id="city_sel">
                 <option id="cityFilterTitle">Filter by City</option>
-                <option>Shanghai</option>
             </select>
-            <select>
+            <select id="country_sel">
                 <option id="countryFilterTitle">Filter by Country</option>
-                <option>Bahamas</option>
-                <option>Canada</option>
-                <option>United States</option>
-                <option>Germany</option>
-                <option>Spain</option>
-                <option>United Kingdom</option>
-                <option>Italy</option>
-                <option>Ghana</option>
-                <option>Greece</option>
-                <option>Hungary</option>
             </select>
-            <select>
-                <option id="continentFilterTitle">Filter by Continent</option>
-                <option>Africa</option>
-                <option>Antarctica</option>
-                <option>Asia</option>
-                <option>South America</option>
-                <option>Europe</option>
-                <option>North America</option>
-                <option>Oceania</option>
+            <select id="continent_sel">
             </select>
             <input type="button" id="filterButton" value="Filter">
         </div>
-        <div>
-            <p><img alt="img"><img alt="img"><img alt="img"><img alt="img"></p>
-            <p><img alt="img"><img alt="img"><img alt="img"><img alt="img"></p>
-            <p><img alt="img"><img alt="img"><img alt="img"><img alt="img"></p>
-            <p><img alt="img"><img alt="img"><img alt="img"><img alt="img"></p>
-            <p><img alt="img"><img alt="img"><img alt="img"><img alt="img"></p>
+        <div id="pics">
+
         </div>
         <div id="pageTurner">
-            <a href="#front" id="front">◀</a>
-            <a href="#a1" id="a1">1</a>
-            <a href="#a2" id="a2">2</a>
-            <a href="#a3" id="a3">3</a>
-            <a href="#a4" id="a4">4</a>
-            <a href="#a5" id="a5">5</a>
-            <a href="#behind" id="behind">▶</a>
+            <a id="back">◀</a>
+            <div id="pages">
+            </div>
+            <a id="forward">▶</a>
         </div>
     </section>
 

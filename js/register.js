@@ -53,7 +53,7 @@ window.addEventListener("load", function () {
             return;
         }
 
-        if(emailTip.value!="" || passwordTip!="" || usernameTip!=""){
+        if((emailTip.value!="" || passwordTip.value!="" || usernameTip.value!="") &&(emailTip.value!=undefined ||passwordTip.value!=undefined ||usernameTip.value!=undefined)){
             return;
         }
 
@@ -65,6 +65,7 @@ window.addEventListener("load", function () {
         regXhr.addEventListener("load", function () {
             var response=regXhr.responseText;
             if(response!=="You've registered" && response!="ERROR"){
+                console.log(response);
                 window.location.href="../home.html";
                 var login = document.getElementById("login");
                 var afterLog = document.getElementById("afterLog");

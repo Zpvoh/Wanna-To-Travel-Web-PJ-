@@ -145,14 +145,19 @@ figcaption{
 }
 
 footer{
-    margin-top: 100px;
-    font-family: "Goudy Old Style";
+    position: fixed;
+    bottom: 0;
+    font-family: Arial;
     font-size: smaller;
+    color: #888888;
     text-align: left;
+    width: 60%;
+    z-index: 10;
 }
 
 footer a{
     margin: 2em;
+    color: #888888;
     font-family: Calibri;
     font-size: 1.2em;
     font-weight: 600;

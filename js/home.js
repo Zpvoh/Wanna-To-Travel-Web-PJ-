@@ -11,7 +11,6 @@ window.addEventListener("load", function () {
     initialPics();
     recommendPicDisplay();
     uploadPicDisplay();
-    initialImgHref();
     recommendClick();
     uploadClick();
     var leftArrow=document.getElementById("left");
@@ -24,9 +23,7 @@ window.addEventListener("load", function () {
     });
 
     clickChoosePage();
-
-    var _accountMenu=$('#accountMenu');
-    _accountMenu.hide();
+    initialImgHref();
 
 
 });
