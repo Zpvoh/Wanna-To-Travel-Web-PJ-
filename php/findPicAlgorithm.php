@@ -45,3 +45,19 @@ if($rsCountries) {
 }else{
     $country="I don't know";
 }
+
+$favorUID=0;
+if(isset($_GET['uid'])){
+    $favorUID=$_GET['uid'];
+}
+
+$rsFavor=$db->query("select * from travelimagefavor WHERE UID={$favorUID} AND ImageID={$_GET['ImageID']}");
+
+if($rsFavor->fetch_assoc()){
+    $isFavor="Favourite";
+}else{
+    $isFavor="Add to favourite";
+}
+
+$rsFavorNum=$db->query("select count(*) from travelimagefavor WHERE ImageID={$_GET['ImageID']}");
+$favorNum=$rsFavorNum->fetch_assoc()['count(*)'];

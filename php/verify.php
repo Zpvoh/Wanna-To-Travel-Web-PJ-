@@ -12,10 +12,11 @@ $password=$_POST['password'];
 
 $rsUID=$db->query("select UID from traveluserdetails where Email='{$email}'");
 $uid=$rsUID->fetch_assoc()['UID'];
-$rsUser=$db->query("select Pass from traveluser where UID='{$uid}'");
+$rsUser=$db->query("select Pass, UserName from traveluser where UID='{$uid}'");
 $rowPass=$rsUser->fetch_assoc();
 if(isset($rowPass['Pass']) && $password===$rowPass['Pass']){
-    echo $uid;
+    echo $uid."&";
+    echo $rowPass['UserName'];
 }else{
     echo "NOT PASS";
 }

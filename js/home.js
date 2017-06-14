@@ -33,8 +33,8 @@ function slideSendRequest(id) {
     slideXhr.send(null);
 }
 
-function recommendSendRequest(start, end) {
-    recommendXhr.open("get", "php/getRatingList.php?"+bindDemands(changeDemand("start", start), changeDemand("end", end)), true);
+function recommendSendRequest(start, num) {
+    recommendXhr.open("get", "php/getRatingList.php?"+bindDemands(changeDemand("start", start), changeDemand("num", num)), true);
     recommendXhr.send(null);
 }
 
@@ -144,7 +144,7 @@ function recommendPicDisplay() {
     var recommendRefresh=document.getElementById("recommendRefresh");
     var recommendStage=document.getElementById("recommendStage");
     var recommendPics=recommendStage.getElementsByTagName("figure");
-    recommendSendRequest(recommendIndex*6, (recommendIndex+1)*6);
+    recommendSendRequest(recommendIndex*6, 6);
     recommendXhr.addEventListener("load", function () {
         var imageArray=JSON.parse(recommendXhr.responseText);
         console.log(imageArray);

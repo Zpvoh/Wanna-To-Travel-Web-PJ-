@@ -8,8 +8,8 @@
 include_once "connectDatabase.php";
 
 $start=$_GET["start"];
-$end=$_GET["end"];
-$rsRatingList=$db->query("select ImageID, SUM(Rating) from travelimagerating GROUP BY ImageID ORDER By sum(Rating) Limit {$start}, {$end}");
+$num=$_GET["num"];
+$rsRatingList=$db->query("select ImageID, count(*) from travelimagefavor GROUP BY ImageID ORDER By COUNT(*) DESC Limit {$start}, {$num}");
 
 $all=array();
 $index=0;

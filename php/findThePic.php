@@ -9,7 +9,13 @@ include_once "findPicAlgorithm.php";
 
 echo $path."&";
 echo $description."&";
-echo $title;
+echo $title."&";
+echo $latitude."&";
+echo $longitude."&";
+echo $name."&";
+echo $country."&";
+echo $city."&";
+echo $isFavor."&";
+echo $favorNum;
 
 $db->close();
-?>
