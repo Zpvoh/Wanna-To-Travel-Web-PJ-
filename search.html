@@ -45,68 +45,32 @@
     <section id="searchStage">
         <h2>Search</h2>
         <div>
-        <input type="radio" id="titleRadio" name="filterRadio" checked>
+        <input type="radio" id="titleRadio" name="filterRadio" value="title" checked>
         <label for="titleRadio">Filter By Title</label>
             <div>
             <input type="text" id="titleBox">
             </div>
         </div>
         <div>
-        <input type="radio" id="descriptionRadio" name="filterRadio">
+        <input type="radio" id="descriptionRadio" name="filterRadio" value="description">
         <label for="descriptionRadio">Filter By Description</label>
             <div>
-            <textarea></textarea>
+            <textarea id="descriptionBox"></textarea>
             </div>
         </div>
         <a id="filterButton">Filter</a>
     </section>
     <section id="resultStage">
         <h2>Search Result</h2>
-        <div>
-        <div>
-            <img alt="img">
-            <div>
-            <h1></h1>
-            <p></p>
-            </div>
+        <div id="result">
+
         </div>
-        <div>
-            <img alt="img">
-            <div>
-                <h1></h1>
-                <p></p>
+
+        <div id="pageTurner">
+            <a id="back">◀</a>
+            <div id="pages">
             </div>
-        </div>
-        <div>
-            <img alt="img">
-            <div>
-                <h1></h1>
-                <p></p>
-            </div>
-        </div>
-        <div>
-            <img alt="img">
-            <div>
-                <h1></h1>
-                <p></p>
-            </div>
-        </div>
-        <div>
-            <img alt="img">
-            <div>
-                <h1></h1>
-                <p></p>
-            </div>
-        </div>
-            <div id="pageTurner">
-                <a href="#pageTurner">◀</a>
-                <a href="#pageTurner">1</a>
-                <a href="#pageTurner">2</a>
-                <a href="#pageTurner">3</a>
-                <a href="#pageTurner">4</a>
-                <a href="#pageTurner">5</a>
-                <a href="#pageTurner">▶</a>
-            </div>
+            <a id="forward">▶</a>
         </div>
     </section>
 </article>

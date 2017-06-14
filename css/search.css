@@ -65,8 +65,15 @@ section a{
 }
 
 #pageTurner{
+    display: inline;
     position: relative;
     left: 40%;
+}
+
+#pages{
+    display: inline;
+    position: relative;
+    right: 0.4em;
 }
 
 #pageTurner a{
@@ -74,7 +81,7 @@ section a{
     padding: 0 0.5em 0 0.5em;
 }
 
-#resultStage div>div{
+#result div{
     display: inline-flex;
     width: 92%;
 }
@@ -97,4 +104,8 @@ section a{
 
 #resultStage img{
     margin: 0.5em;
+}
+
+#back, #forward{
+    cursor: pointer;
 }

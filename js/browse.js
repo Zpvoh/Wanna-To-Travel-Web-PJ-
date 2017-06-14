@@ -4,12 +4,13 @@
 var page=1;
 var rowNum=5;
 var colomnNum=4;
+var filterFlag;
 var totalPageNum=1;
 var filterXhr=new XMLHttpRequest();
 window.addEventListener("load",function () {
     initialFilter(rowNum, colomnNum);
     initialSelect();
-    filterPicsDisplay("AF", "continent", (page-1)*rowNum*colomnNum, page*rowNum*colomnNum);
+    filterPicsDisplay("AF", "continent", (page-1)*rowNum*colomnNum, rowNum*colomnNum);
     initialImgHref();
     initialFilterButton();
     initialPageTurner();
@@ -17,8 +18,8 @@ window.addEventListener("load",function () {
     pageTurnerTrans();
 });
 
-function filterSendRequest(name, type, start, end) {
-    filterXhr.open("get", "php/filter.php?"+bindDemands(changeDemand("type", type), changeDemand("name", name), changeDemand("start", start), changeDemand("end", end)));
+function filterSendRequest(name, type, start, num) {
+    filterXhr.open("get", "php/filter.php?"+bindDemands(changeDemand("type", type), changeDemand("name", name), changeDemand("start", start), changeDemand("num", num)));
     filterXhr.send(null);
 }
 
@@ -126,6 +127,7 @@ function initialFilterButton() {
 
     filterButton.addEventListener("click", function () {
         page=1;
+        filterFlag=true;
         requestPic();
     },true);
 }
@@ -143,11 +145,11 @@ function requestPic() {
     var country_sel=document.getElementById("country_sel");
     var continent_sel=document.getElementById("continent_sel");
     if(country_sel.value==""){
-        filterSendRequest(continent_sel.value, "continent", (page-1)*rowNum*colomnNum, page*rowNum*colomnNum);
+        filterSendRequest(continent_sel.value, "continent", (page-1)*rowNum*colomnNum, rowNum*colomnNum);
     }else if(city_sel.value==""){
-        filterSendRequest(country_sel.value, "country", (page-1)*rowNum*colomnNum, page*rowNum*colomnNum);
+        filterSendRequest(country_sel.value, "country", (page-1)*rowNum*colomnNum, rowNum*colomnNum);
     }else{
-        filterSendRequest(city_sel.value, "city", (page-1)*rowNum*colomnNum, page*rowNum*colomnNum);
+        filterSendRequest(city_sel.value, "city", (page-1)*rowNum*colomnNum, rowNum*colomnNum);
     }
 }
 
@@ -170,7 +172,7 @@ function changePagination(start, end) {
                 var continent_sel=document.getElementById("continent_sel");
                 page=this.dataset.index;
                 resetPage(totalPageNum);
-                updatePage(page-1);
+                updatePage(page);
                 requestPic();
             }, true);
 
@@ -178,14 +180,14 @@ function changePagination(start, end) {
         }
 
     resetPage(totalPageNum);
-    updatePage(page-1);
+    updatePage(page);
 }
 
-function filterPicsDisplay(name, type, start, end) {
+function filterPicsDisplay(name, type, start, num) {
     var picsStage=document.getElementById("pics");
     var imgs=picsStage.getElementsByTagName("img");
 
-    filterSendRequest(name, type, start, end);
+    filterSendRequest(name, type, start, num);
     filterXhr.onload=function () {
         console.log(filterXhr.responseText);
         var pics=JSON.parse(filterXhr.responseText.split("&")[0]);
@@ -203,7 +205,9 @@ function filterPicsDisplay(name, type, start, end) {
 
         var picTotalNum=filterXhr.responseText.split("&")[1];
         totalPageNum=parseInt(picTotalNum/(rowNum*colomnNum))+(picTotalNum%(rowNum*colomnNum)==0?0:1);
-        initialPageTurner();
+        if(filterFlag) {
+            initialPageTurner();
+        }
 
     };
 }
@@ -255,7 +259,7 @@ function resetPage() {
 }
 
 function updatePage(index) {
-    var pageChoose=document.getElementById("page"+(index+1));
+    var pageChoose=document.getElementById("page"+(index));
 
     pageChoose.style.backgroundColor="indigo";
     pageChoose.style.color="azure";

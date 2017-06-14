@@ -9,7 +9,7 @@
 $name=$_GET['name'];
 $type=$_GET['type'];
 $start=$_GET['start'];
-$end=$_GET['end'];
+$num=$_GET['num'];
 
 include_once "connectDatabase.php";
 
@@ -18,7 +18,7 @@ switch ($type){
         $rs=$db->query("select travelimagedetails.ImageID, travelimage.Path
                           from travelimage, travelimagedetails, geocountries, geocontinents
                           WHERE geocontinents.ContinentCode='{$name}' AND geocontinents.ContinentCode=geocountries.Continent AND geocountries.ISO=travelimagedetails.CountryCodeISO AND travelimage.ImageID=travelimagedetails.ImageID 
-                          ORDER BY travelimage.ImageID Limit {$start}, {$end}");
+                          ORDER BY travelimage.ImageID Limit {$start}, {$num}");
         $rsCount=$db->query("select COUNT(*)
                           from travelimage, travelimagedetails, geocountries, geocontinents
                           WHERE geocontinents.ContinentCode='{$name}' AND geocontinents.ContinentCode=geocountries.Continent AND geocountries.ISO=travelimagedetails.CountryCodeISO AND travelimage.ImageID=travelimagedetails.ImageID 
@@ -31,7 +31,7 @@ switch ($type){
         $rs=$db->query("select travelimage.ImageID, travelimage.Path
                           from travelimagedetails, travelimage
                           WHERE CountryCodeISO='{$name}'AND travelimagedetails.ImageID=travelimage.ImageID
-                          ORDER BY travelimage.ImageID Limit {$start}, {$end}");
+                          ORDER BY travelimage.ImageID Limit {$start}, {$num}");
 
         $rsCount=$db->query("select COUNT(*)
                           from travelimagedetails, travelimage
@@ -45,7 +45,7 @@ switch ($type){
         $rs=$db->query("select travelimage.ImageID, travelimage.Path
                           from travelimagedetails, travelimage
                           WHERE CityCode='{$name}' AND travelimagedetails.ImageID=travelimage.ImageID
-                          ORDER BY travelimage.ImageID Limit {$start}, {$end}");
+                          ORDER BY travelimage.ImageID Limit {$start}, {$num}");
 
         $rsCount=$db->query("select COUNT(*)
                           from travelimagedetails, travelimage
