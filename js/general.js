@@ -5,14 +5,19 @@
 var isSlided = false;
 var imgArray = document.getElementsByTagName("img");
 var xhr = new XMLHttpRequest();
+var uid, username;
 
 window.addEventListener("load", function () {
+
     var login = document.getElementById("login");
     var afterLog = document.getElementById("afterLog");
     console.log(document.cookie);
     var cookieArray=analyzeCookie(document.cookie);
     console.log(cookieArray);
     if(cookieArray['UID']!==undefined && cookieArray['UID']!==""){
+        uid=getCookie("UID");
+        username=getCookie("UserName");
+
         login.style.display = "none";
         afterLog.style.display = "inline";
         afterLog.innerText="Welcome, "+cookieArray[' UserName']+"▼";
@@ -31,6 +36,11 @@ function analyzeCookie(cookie) {
     }
 
     return keyValueArray;
+}
+
+function getCookie(cookieName) {
+    var cookieArray=analyzeCookie(document.cookie);
+    return cookieArray[cookieName];
 }
 
 function changeDemand(name, value) {

@@ -153,7 +153,7 @@ function changePagination(start, end) {
         pages.appendChild(pageBt);
     }
 
-    resetPage(totalPageNum);
+    resetPage();
     updatePage(page);
 }
 

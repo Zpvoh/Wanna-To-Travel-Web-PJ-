@@ -21,13 +21,24 @@ section a{
 }
 
 #pageTurner{
+    display: inline;
     position: relative;
     left: 40%;
+}
+
+#pages{
+    display: inline;
+    position: relative;
+    right: 0.4em;
 }
 
 #pageTurner a{
     color: indigo;
     padding: 0 0.5em 0 0.5em;
+}
+
+#back, #forward{
+    cursor: pointer;
 }
 
 #myFavourite{
@@ -40,7 +51,7 @@ section a{
     margin-bottom: 0;
 }
 
-#myFavourite div>div{
+.imgDiv{
     position: relative;
     display: inline-flex;
     width: 92%;

@@ -145,8 +145,8 @@ figcaption{
 }
 
 footer{
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    top:5em;
     font-family: Arial;
     font-size: smaller;
     color: #888888;

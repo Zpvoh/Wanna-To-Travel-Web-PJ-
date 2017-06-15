@@ -4,7 +4,6 @@
 var xhr=new XMLHttpRequest();
 var xhrFavor=new XMLHttpRequest();
 var imageId=decodeURIComponent(window.location.href.split("=")[1].split("#")[0]);
-var uid;
 window.onload=function () {
     var cookies=document.cookie.split(";");
     for(var i in cookies){

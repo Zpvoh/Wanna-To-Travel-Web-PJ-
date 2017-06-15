@@ -1,3 +1,4 @@
+
 section{
     z-index:0;
     text-align: left;
@@ -33,7 +34,7 @@ h2{
 
 #displayInfo{
     display: inline-flex;
-    width: 500em;
+    width: 50em;
     margin: 50px;
 }
 
