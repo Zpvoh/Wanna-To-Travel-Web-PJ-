@@ -10,7 +10,8 @@ include_once "connectDatabase.php";
 $uid=$_POST['uid'];
 $title=$_POST['photoName'];
 $message=$_POST['description'];
-$imageID;
+$path=$_FILES['file']['name'];
+$imageID=1;
 // 允许上传的图片后缀
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 $temp = explode(".", $_FILES["file"]["name"]);
@@ -22,7 +23,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
         || ($_FILES["file"]["type"] == "image/x-png")
         || ($_FILES["file"]["type"] == "image/png"))
     && ($_FILES["file"]["size"] < 5000*1024)   // 小于 200 kb
-    && in_array($extension, $allowedExts))
+    )
 {
     if ($_FILES["file"]["error"] > 0)
     {
@@ -33,21 +34,21 @@ if ((($_FILES["file"]["type"] == "image/gif")
 
         // 判断../img/travel-images/large/目录是否存在该文件
         // 如果没有../img/travel-images/large/目录，你需要创建它
-        if (file_exists("../img/travel-images/large/" . $_FILES["file"]["name"]))
+        while (file_exists("../img/travel-images/large/" . $path))
         {
-            echo $_FILES["file"]["name"] . " 文件已经存在。 ";
+            echo $path . " 文件已经存在。 ";
+            $path=$path+rand(1000, 9999);
         }
-        else
-        {
+
             // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
-            move_uploaded_file($_FILES["file"]["tmp_name"], "../img/travel-images/large/" . $_FILES["file"]["name"]);
+            move_uploaded_file($_FILES["file"]["tmp_name"], "../img/travel-images/large/" . $path);
+            clipPic();
             $db->begin_transaction();
             insertImage();
             insertPost();
             $db->commit();
             echo "Done";
 
-        }
     }
 }
 else
@@ -59,12 +60,12 @@ else
 }
 
 function insertImage(){
-    global $db, $imageID;
+    global $db, $imageID, $path;
 
     $db->query("insert into travelimage
                  (UID, Path)
                  VALUES 
-                 ({$_POST['uid']}, '{$_FILES['file']['name']}')");
+                 ({$_POST['uid']}, '{$path}')");
 
     $rsImage=$db->query("select ImageID from travelimage
                           ORDER by ImageID DESC limit 1");
@@ -128,10 +129,88 @@ function insertPost(){
     }
 }
 
-function rollback(){
-    global $db;
+function clipPic(){
+    global $path;
+    $smedium=['x'=>'0', 'y'=>'0', 'width'=>'150', 'height'=>'150'];
+    $ssmall=['x'=>'0', 'y'=>'0', 'width'=>'75', 'height'=>'75'];
+    $stiny=['x'=>'0', 'y'=>'0', 'width'=>'48', 'height'=>'48'];
 
-    unlink("../img/travel-images/large/" . $_FILES["file"]["name"]);
+    switch ($_FILES['file']['type']){
+        case "image/gif":
+            $img=imagecreatefromgif("../img/travel-images/large/" . $path);
+            $width=imagesx($img);
+            $height=imagesy($img);
+            $imgM=imagecreatetruecolor($width/1.6, $height/1.6);
+            $imgS=imagecreatetruecolor($width/3.2, $height/3.2);
+            $imgT=imagecreatetruecolor($width/10.24, $height/10.24);
+
+            imagecopyresized($imgM, $img, 0, 0, 0, 0, $width/1.6, $height/1.6, $width, $height);
+            imagecopyresized($imgS, $imgM, 0, 0, 0, 0, $width/3.2, $height/3.2, $width, $height);
+            imagecopyresized($imgT, $img, 0, 0, 0, 0, $width/10.24, $height/10.24, $width, $height);
+            $smpic=imagecrop($imgM, $smedium);
+            $sspic=imagecrop($imgS, $ssmall);
+            $stpic=imagecrop($imgT, $stiny);
+            imagegif($smpic, "../img/travel-images/square-medium/" . $path);
+            imagegif($sspic, "../img/travel-images/square-small/" . $path);
+            imagegif($stpic, "../img/travel-images/square-tiny/" . $path);
+            imagegif($imgM, "../img/travel-images/medium/" . $path);
+            imagegif($imgS, "../img/travel-images/small/" . $path);
+            imagegif($imgT, "../img/travel-images/thumb/" . $path);
+            break;
+
+        case "image/jpeg":
+        case "image/jpg":
+        case "image/pjpeg":
+        $img=imagecreatefromjpeg("../img/travel-images/large/" . $path);
+        $width=imagesx($img);
+        $height=imagesy($img);
+        $imgM=imagecreatetruecolor($width/1.6, $height/1.6);
+        $imgS=imagecreatetruecolor($width/3.2, $height/3.2);
+        $imgT=imagecreatetruecolor($width/10.24, $height/10.24);
+
+        imagecopyresized($imgM, $img, 0, 0, 0, 0, $width/1.6, $height/1.6, $width, $height);
+        imagecopyresized($imgS, $imgM, 0, 0, 0, 0, $width/3.2, $height/3.2, $width, $height);
+        imagecopyresized($imgT, $img, 0, 0, 0, 0, $width/10.24, $height/10.24, $width, $height);
+        $smpic=imagecrop($imgM, $smedium);
+        $sspic=imagecrop($imgS, $ssmall);
+        $stpic=imagecrop($imgT, $stiny);
+        imagejpeg($smpic, "../img/travel-images/square-medium/" . $path);
+        imagejpeg($sspic, "../img/travel-images/square-small/" . $path);
+        imagejpeg($stpic, "../img/travel-images/square-tiny/" . $path);
+        imagejpeg($imgM, "../img/travel-images/medium/" . $path);
+        imagejpeg($imgS, "../img/travel-images/small/" . $path);
+        imagejpeg($imgT, "../img/travel-images/thumb/" . $path);
+        break;
+
+        case "image/x-png":
+        case "image/png":
+        $img=imagecreatefrompng("../img/travel-images/large/" . $path);
+        $width=imagesx($img);
+        $height=imagesy($img);
+        $imgM=imagecreatetruecolor($width/1.6, $height/1.6);
+        $imgS=imagecreatetruecolor($width/3.2, $height/3.2);
+        $imgT=imagecreatetruecolor($width/10.24, $height/10.24);
+
+        imagecopyresized($imgM, $img, 0, 0, 0, 0, $width/1.6, $height/1.6, $width, $height);
+        imagecopyresized($imgS, $imgM, 0, 0, 0, 0, $width/3.2, $height/3.2, $width, $height);
+        imagecopyresized($imgT, $img, 0, 0, 0, 0, $width/10.24, $height/10.24, $width, $height);
+        $smpic=imagecrop($imgM, $smedium);
+        $sspic=imagecrop($imgS, $ssmall);
+        $stpic=imagecrop($imgT, $stiny);
+        imagepng($smpic, "../img/travel-images/square-medium/" . $path);
+        imagepng($sspic, "../img/travel-images/square-small/" . $path);
+        imagepng($stpic, "../img/travel-images/square-tiny/" . $path);
+        imagepng($imgM, "../img/travel-images/medium/" . $path);
+        imagepng($imgS, "../img/travel-images/small/" . $path);
+        imagepng($imgT, "../img/travel-images/thumb/" . $path);
+        break;
+    }
+}
+
+function rollback(){
+    global $db, $path;
+
+    unlink("../img/travel-images/large/" . $path);
     $db->query("rollback");
 }
 

@@ -24,9 +24,10 @@ function initialSubmit() {
         uploadXhr.onload=function () {
             console.log(uploadXhr.responseText);
             if(uploadXhr.responseText=="Done"){
-
+                location.reload(true);
+                alert("Upload success!");
             }else{
-
+                alert("Ohh, there is something wrong!");
             }
         };
     },true);
