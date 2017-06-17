@@ -110,20 +110,6 @@ function account() {
     }
 }
 
-function splitInfo(data) {
-    var infoArray = new Array;
-    var eachLine = data.split('\n');
-    for (var i = 0; i < eachLine.length; i++) {
-        var currentLine = eachLine[i];
-        infoArray[i] = currentLine.split(';');
-    }
-
-    initial();
-    initialImgHref();
-
-    return infoArray;
-}
-
 function login() {
     var login = document.getElementById("login");
     var afterLog = document.getElementById("afterLog");

@@ -31,8 +31,15 @@ section a{
 }
 
 #pageTurner{
+    display: inline;
     position: relative;
     left: 40%;
+}
+
+#pages{
+    display: inline;
+    position: relative;
+    right: 0.4em;
 }
 
 #pageTurner a{
@@ -40,14 +47,19 @@ section a{
     padding: 0 0.5em 0 0.5em;
 }
 
-#myUpload div>div{
+#back, #forward{
+    cursor: pointer;
+}
+
+.imgDiv{
+    position: relative;
     display: inline-flex;
     width: 92%;
 }
 
 #myUpload div div div{
     display: block;
-    width: 30em;
+    width: 50em;
     border: none;
 }
 
@@ -66,6 +78,7 @@ section a{
 }
 
 input[value="Modify"]{
+    height: 3em;
     color: azure;
     background-color: darkblue;
     border-radius: 0.5em;
@@ -74,6 +87,7 @@ input[value="Modify"]{
 }
 
 input[value="Delete"]{
+    height: 3em;
     color: azure;
     background-color: firebrick;
     border-radius: 0.5em;

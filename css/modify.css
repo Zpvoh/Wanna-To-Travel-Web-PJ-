@@ -32,6 +32,8 @@ label{
 
 #photo{
     margin: 1em;
+    max-width: 50%;
+
 }
 
 section input:not([type="submit"]), textarea{
