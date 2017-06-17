@@ -7,7 +7,7 @@ var uploadXhr=new XMLHttpRequest();
 var index = 2;
 var recommendIndex=0;
 window.addEventListener("load", function () {
-    slideSendRequest(index+1);
+    slideSendRequest(index);
     initialPics();
     recommendPicDisplay();
     uploadPicDisplay();
@@ -16,10 +16,12 @@ window.addEventListener("load", function () {
     var leftArrow=document.getElementById("left");
     leftArrow.addEventListener("click", onLeft, false);
     slideXhr.addEventListener("load", function () {
-        var picInfo = slideXhr.responseText.split("&");
-        var path = picInfo[0];
-        var description = picInfo[1];
-        updateSlidePage(path, description);
+        var picInfo = JSON.parse(slideXhr.responseText);
+        console.log(picInfo);
+        var id=picInfo[0].id;
+        var path = picInfo[0].path;
+        var title = picInfo[0].title;
+        updateSlidePage(id, path, title);
     });
 
     clickChoosePage();
@@ -28,8 +30,8 @@ window.addEventListener("load", function () {
 
 });
 
-function slideSendRequest(id) {
-    slideXhr.open("get", "php/findThePic.php?"+changeDemand("ImageID", id), true);
+function slideSendRequest(start) {
+    slideXhr.open("get", "php/getRatingList.php?"+bindDemands(changeDemand("start", start), changeDemand("num", 1)), true);
     slideXhr.send(null);
 }
 
@@ -50,7 +52,7 @@ function onLeft() {
     } else {
         index = 0;
     }
-    slideSendRequest(index+1);
+    slideSendRequest(index);
 }
 
 function onRight() {
@@ -59,10 +61,10 @@ function onRight() {
     } else {
         index = 2;
     }
-    slideSendRequest(index+1);
+    slideSendRequest(index);
 }
 
-function updateSlidePage(path, description) {
+function updateSlidePage(id, path, title) {
     var display = document.getElementById("display");
     var showDescription=document.getElementById("showDescription");
     var _display=$('#display');
@@ -86,10 +88,10 @@ function updateSlidePage(path, description) {
             break;
     }
     display.setAttribute("src", "img/travel-images/large/" + path);
-    display.dataset.imageid=index+1;
+    display.dataset.imageid=id;
     _display.fadeOut(500);
     _display.fadeIn(500);
-    showDescription.innerText=description;
+    showDescription.innerText=title;
 }
 
 function clickChoosePage() {
@@ -144,7 +146,7 @@ function recommendPicDisplay() {
     var recommendRefresh=document.getElementById("recommendRefresh");
     var recommendStage=document.getElementById("recommendStage");
     var recommendPics=recommendStage.getElementsByTagName("figure");
-    recommendSendRequest(recommendIndex*6, 6);
+    recommendSendRequest(recommendIndex*6+3, 6);
     recommendXhr.addEventListener("load", function () {
         var imageArray=JSON.parse(recommendXhr.responseText);
         console.log(imageArray);
@@ -219,32 +221,6 @@ function uploadClick() {
     }, true);
 }
 
-function initialViewDetail() {
-    var recommendRefresh=document.getElementById("recommendRefresh");
-    var recommendStage=document.getElementById("recommendStage");
-    var recommendPics=recommendStage.getElementsByTagName("figure");
-    for(var i=0; i<recommendPics.length; i++){
-        var viewDetails=recommendPics[i].getElementsByTagName("a");
-        viewDetails[0].onclick = function () {
-                var pic = recommendPics[findParent(event.srcElement)].getElementsByTagName("img")[0];
-                window.open("detail.html");
-                document.getElementsByTagName("body")[0].setAttribute("name", theTail(pic.getAttribute("src")));
-                console.log(event.srcElement.getAttribute("src"));
-            };
-    }
-}
-
-function findParent(elementViewDetail) {
-    var recommendRefresh=document.getElementById("recommendRefresh");
-    var recommendStage=document.getElementById("recommendStage");
-    var recommendPics=recommendStage.getElementsByTagName("figure");
-    for(var i=0; i<recommendPics.length; i++){
-       if(recommendPics[i].getElementsByTagName("a")[0]==elementViewDetail){
-           return i;
-       }
-    }
-    return null;
-}
 
 
 

@@ -44,10 +44,29 @@ function initialResult() {
 
 function initialFilterButton() {
     var filterBt=document.getElementById("filterButton");
+    var titleRadio=document.getElementById("titleRadio");
+    var descriptionRadio=document.getElementById("descriptionRadio");
+    var titleBox=document.getElementById("titleBox");
+    var descriptionBox=document.getElementById("descriptionBox");
+
     filterBt.addEventListener("click", function () {
         page=1;
         filterFlag=true;
         requestPic();
+    },true);
+
+    titleRadio.addEventListener("click", function () {
+        if(titleRadio.checked) {
+            titleBox.disabled=false;
+            descriptionBox.disabled=true;
+        }
+    },true);
+
+    descriptionRadio.addEventListener("click", function () {
+        if(descriptionRadio.checked) {
+            descriptionBox.disabled=false;
+            titleBox.disabled=true;
+        }
     },true);
 }
 

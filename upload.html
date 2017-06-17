@@ -44,7 +44,7 @@
 <article>
     <section>
         <h2>Upload</h2>
-        <form name="upload" id="upload">
+        <form name="upload" id="upload" method="post" action="php/upload.php" enctype="multipart/form-data">
             <div>
                 <input type="file" id="fileBox" name="file">
             </div>
@@ -70,7 +70,7 @@
                 <input type="number" placeholder="Longitude..." name="longitude" min="-90" max="90">
             </div>
             <div>
-                <input type="submit" value="Submit">
+                <input type="button" value="Submit" id="submit">
             </div>
         </form>
     </section>
