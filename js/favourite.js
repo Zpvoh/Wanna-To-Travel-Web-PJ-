@@ -86,6 +86,10 @@ function favouriteDisplay() {
             img[i].src = "";
             img[i].dataset.imageid = 0;
             title[i].innerText = "";
+            title[i].dataset.imageid = 0;
+            title[i].addEventListener("click", function () {
+
+            }, true);
             description[i].innerText = "";
             if(imgDiv[i].getElementsByClassName("delete")[0]!=undefined) {
                 imgDiv[i].removeChild(imgDiv[i].getElementsByClassName("delete")[0]);
@@ -96,6 +100,12 @@ function favouriteDisplay() {
             img[i].src="img/travel-images/square-medium/"+info[i][1];
             img[i].dataset.imageid=info[i][0];
             title[i].innerText=info[i][2];
+            title[i].dataset.imageid = info[i][0];
+            title[i].style.cursor="pointer";
+            title[i].addEventListener("click", function () {
+                window.open("detail.html?ImageID="+this.dataset.imageid);
+            }, true);
+
             description[i].innerText=info[i][3];
 
             var deleteBt=document.createElement("input");

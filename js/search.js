@@ -122,6 +122,10 @@ function resultDisplay(type) {
                 img[i].src = "";
                 img[i].dataset.imageid = 0;
                 title[i].innerText = "";
+                title[i].dataset.imageid = 0;
+                title[i].addEventListener("click", function () {
+
+                }, true);
                 description[i].innerText = "";
             }
 
@@ -134,6 +138,11 @@ function resultDisplay(type) {
                 img[i].src = "img/travel-images/square-medium/" + result[i][1];
                 img[i].dataset.imageid = result[i][0];
                 title[i].innerText = result[i][2];
+                title[i].dataset.imageid = result[i][0];
+                title[i].style.cursor="pointer";
+                title[i].addEventListener("click", function () {
+                    window.open("detail.html?ImageID="+this.dataset.imageid);
+                }, true);
                 description[i].innerText = result[i][3];
             }
 

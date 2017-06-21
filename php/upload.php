@@ -22,7 +22,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
         || ($_FILES["file"]["type"] == "image/pjpeg")
         || ($_FILES["file"]["type"] == "image/x-png")
         || ($_FILES["file"]["type"] == "image/png"))
-    && ($_FILES["file"]["size"] < 5000*1024)   // 小于 200 kb
+    && ($_FILES["file"]["size"] < 20000*1024)   // 小于 200 kb
     )
 {
     if ($_FILES["file"]["error"] > 0)
@@ -46,6 +46,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
             $db->begin_transaction();
             insertImage();
             insertPost();
+            changeModifyTime();
             $db->commit();
             echo "Done";
 
@@ -53,10 +54,17 @@ if ((($_FILES["file"]["type"] == "image/gif")
 }
 else
 {
-    echo "You should upload an image file of .jpg, .jpeg, .png, .gif";
+    echo "You should upload an image file of .jpg, .jpeg, .png, .gif and the size should be smaller than 20M";
     var_dump($_FILES);
     var_dump($_POST);
     echo $_FILES['file']['error'];
+}
+
+function changeModifyTime(){
+    global $db, $uid;
+    $db->query("update traveluser
+                set DateLastModified=now()
+                WHERE UID={$uid}");
 }
 
 function insertImage(){
@@ -80,7 +88,7 @@ function insertImage(){
     $db->query("insert into travelimagedetails
                 (ImageID, Title, Description, Latitude, Longitude, CityCode, CountryCodeISO)
                 VALUES 
-                ({$imageID}, '{$_POST['photoName']}', '{$_POST['description']}', 
+                ({$imageID}, '{$db->real_escape_string($_POST['photoName'])}', '{$db->real_escape_string($_POST['description'])}', 
                 {$_POST['latitude']}, {$_POST['longitude']}, {$codes['GeoNameID']}, '{$codes['ISO']}')");
     if($db->error!=""){
         rollback();
@@ -110,7 +118,7 @@ function insertPost(){
     $db->query("insert into travelpost
                  (UID, Title, Message, PostTime)
                  VALUES 
-                 ({$_POST['uid']}, '{$_POST['photoName']}', '{$_POST['description']}', now())");
+                 ({$_POST['uid']}, '{$db->real_escape_string($_POST['photoName'])}', '{$db->real_escape_string($_POST['description'])}', now())");
 
     $rsPost=$db->query("select PostID from travelpost
                         ORDER by PostID DESC");

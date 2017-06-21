@@ -2,16 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb897dd3-a78b-4ea1-ae5a-2141127608bc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/travel-images/large/寰俊鍥剧墖_20170416160100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/travel-images/medium/寰俊鍥剧墖_20170416160100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/travel-images/small/寰俊鍥剧墖_20170416160100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/travel-images/square-medium/寰俊鍥剧墖_20170416160100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/travel-images/square-small/寰俊鍥剧墖_20170416160100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/travel-images/square-tiny/寰俊鍥剧墖_20170416160100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/travel-images/thumb/寰俊鍥剧墖_20170416160100.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/homeArticle.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detail.html" afterPath="$PROJECT_DIR$/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.html" afterPath="$PROJECT_DIR$/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/modify.css" afterPath="$PROJECT_DIR$/css/modify.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/upload.css" afterPath="$PROJECT_DIR$/css/upload.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/favourite.js" afterPath="$PROJECT_DIR$/js/favourite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/home.js" afterPath="$PROJECT_DIR$/js/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modify.js" afterPath="$PROJECT_DIR$/js/modify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myphotos.js" afterPath="$PROJECT_DIR$/js/myphotos.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/search.js" afterPath="$PROJECT_DIR$/js/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/upload.js" afterPath="$PROJECT_DIR$/js/upload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modify.html" afterPath="$PROJECT_DIR$/modify.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/modify.php" afterPath="$PROJECT_DIR$/php/modify.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/search.php" afterPath="$PROJECT_DIR$/php/search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/upload.php" afterPath="$PROJECT_DIR$/php/upload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload.html" afterPath="$PROJECT_DIR$/upload.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,6 +56,20 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="traveluser" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="pjtravel@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="travelpostimages" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
@@ -72,51 +92,59 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="modify.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/modify.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1850">
+              <caret line="74" column="24" lean-forward="false" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+              <folding>
+                <marker date="1498060318711" expanded="true" signature="1739:1826" ph="update trave... " />
+                <marker date="1498060318711" expanded="true" signature="1924:1967" ph="select Path travelimage" />
+                <marker date="1498060318711" expanded="true" signature="2071:2126" ph="update trave... " />
+                <marker date="1498060318711" expanded="true" signature="2071:2170" ph="update trave... " />
+                <marker date="1498060318711" expanded="true" signature="2077:2126" ph="insert into travelimage... " />
+                <marker date="1498060318711" expanded="true" signature="2382:2803" ph="update trave... " />
+                <marker date="1498060318711" expanded="true" signature="2382:2817" ph="update trave... " />
+                <marker date="1498060318711" expanded="true" signature="2382:2827" ph="update trave... " />
+                <marker date="1498060318711" expanded="true" signature="2388:2803" ph="insert into travelimagedetails... " />
+                <marker date="1498060318711" expanded="true" signature="2990:3266" ph="select city.... geocities" />
+                <marker date="1498060318711" expanded="true" signature="3431:3505" ph="select PostI... travelpostimages" />
+                <marker date="1498060318711" expanded="true" signature="3600:3828" ph="update trave... " />
+                <marker date="1498060318711" expanded="true" signature="3600:3841" ph="update trave... " />
+                <marker date="1498060318711" expanded="true" signature="3600:3850" ph="update trave... " />
+                <marker date="1498060318711" expanded="true" signature="3606:3828" ph="insert into travelpost... " />
+                <marker date="1498060318711" expanded="true" signature="3871:3914" ph="delete from " />
+                <marker date="1498060318711" expanded="true" signature="3871:3924" ph="delete from " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/upload.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="48" column="22" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="55" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modify.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/modify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1400">
+              <caret line="113" column="25" lean-forward="false" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="modify.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modify.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myphotos.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myphotos.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-275">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/upload.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1575">
-              <caret line="63" column="28" lean-forward="false" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+            <state relative-caret-position="835">
+              <caret line="83" column="56" lean-forward="true" selection-start-line="83" selection-start-column="56" selection-end-line="83" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -125,48 +153,28 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="25">
               <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="browse.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/browse.html">
+      <file leaf-file-name="upload.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/upload.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-275">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="35" column="18" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="41" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="favourite.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/favourite.html">
+      <file leaf-file-name="modify.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/modify.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1150">
-              <caret line="57" column="14" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="57" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-400">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+            <state relative-caret-position="450">
+              <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -226,7 +234,6 @@
         <option value="E:/Apache/php-7.1.4-Win32-VC14-x64/php.ini-development" />
         <option value="E:/Apache/httpd-2.4.25-win64-VC14/Apache24/conf/httpd.conf" />
         <option value="$PROJECT_DIR$/php/filter.php" />
-        <option value="$PROJECT_DIR$/php/search.php" />
         <option value="$PROJECT_DIR$/css/search.css" />
         <option value="$PROJECT_DIR$/php/detail.php" />
         <option value="$PROJECT_DIR$/detail.php" />
@@ -242,31 +249,32 @@
         <option value="$PROJECT_DIR$/favourite.html" />
         <option value="$PROJECT_DIR$/css/favourite.css" />
         <option value="$PROJECT_DIR$/php/getFavouritePics.php" />
-        <option value="$PROJECT_DIR$/js/favourite.js" />
-        <option value="$PROJECT_DIR$/js/search.js" />
         <option value="$PROJECT_DIR$/search.html" />
         <option value="$PROJECT_DIR$/js/browse.js" />
         <option value="$PROJECT_DIR$/js/register.js" />
-        <option value="$PROJECT_DIR$/upload.html" />
-        <option value="$PROJECT_DIR$/js/home.js" />
         <option value="$PROJECT_DIR$/php/connectDatabase.php" />
-        <option value="E:/xampp/php/php.ini" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/console.sql" />
-        <option value="$PROJECT_DIR$/js/upload.js" />
-        <option value="$PROJECT_DIR$/css/upload.css" />
         <option value="$PROJECT_DIR$/php/getUploadPics.php" />
         <option value="$PROJECT_DIR$/js/general.js" />
         <option value="$PROJECT_DIR$/css/myphotos.css" />
         <option value="$PROJECT_DIR$/myphotos.html" />
-        <option value="$PROJECT_DIR$/php/upload.php" />
         <option value="$PROJECT_DIR$/php/changePhoto.php" />
-        <option value="$PROJECT_DIR$/js/myphotos.js" />
-        <option value="$PROJECT_DIR$/js/modify.js" />
-        <option value="$PROJECT_DIR$/css/modify.css" />
-        <option value="$PROJECT_DIR$/php/modify.php" />
-        <option value="$PROJECT_DIR$/modify.html" />
         <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/detail.html" />
+        <option value="$PROJECT_DIR$/php/search.php" />
+        <option value="$PROJECT_DIR$/js/home.js" />
+        <option value="$PROJECT_DIR$/js/search.js" />
+        <option value="$PROJECT_DIR$/js/myphotos.js" />
+        <option value="$PROJECT_DIR$/js/favourite.js" />
+        <option value="E:/xampp/php/php.ini" />
+        <option value="$PROJECT_DIR$/php/upload.php" />
+        <option value="$PROJECT_DIR$/css/upload.css" />
+        <option value="$PROJECT_DIR$/upload.html" />
+        <option value="$PROJECT_DIR$/js/upload.js" />
+        <option value="$PROJECT_DIR$/modify.html" />
+        <option value="$PROJECT_DIR$/css/modify.css" />
+        <option value="$PROJECT_DIR$/js/modify.js" />
+        <option value="$PROJECT_DIR$/php/modify.php" />
       </list>
     </option>
   </component>
@@ -352,6 +360,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Project 2 V1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Project 2 V1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel-images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Project 2 V1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Project 2 V1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travel-images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="large" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Project 2 V1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Project 2 V1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -359,8 +421,8 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -870,7 +932,9 @@
       <workItem from="1497524071895" duration="8732000" />
       <workItem from="1497587965261" duration="9237000" />
       <workItem from="1497667112895" duration="45389000" />
-      <workItem from="1497730029695" duration="415000" />
+      <workItem from="1497730029695" duration="773000" />
+      <workItem from="1497795885945" duration="7809000" />
+      <workItem from="1498054506490" duration="5832000" />
     </task>
     <task id="LOCAL-00001" summary="第三个版本">
       <created>1497024947458</created>
@@ -956,11 +1020,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497729453161</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="总体完成的第一版本">
+      <created>1497730533696</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1497730533696</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241179000" />
+    <option name="totallyTimeSpent" value="255178000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -973,36 +1044,36 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1908" height="1038" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296371" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27116936" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296371" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2703322" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296371" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1748366" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18954249" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1791939" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18954249" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296371" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1070,122 +1141,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/img/travel-images/square-small/4.png" />
-    <entry file="file://$PROJECT_DIR$/img/travel-images/square-tiny/4.png" />
-    <entry file="file://$PROJECT_DIR$/img/travel-images/square-medium/4.png" />
-    <entry file="file://$PROJECT_DIR$/img/travel-images/thumb/4.png" />
-    <entry file="file://$PROJECT_DIR$/img/travel-images/medium/4.png" />
-    <entry file="dbDummy://dbtable:/250be175/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/pjtravel.travelpostimages">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/250be175/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/pjtravel.travelimagedetails">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/filter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-          <folding>
-            <marker date="1497445273931" expanded="true" signature="275:358" ph="select trave... *" />
-            <marker date="1497445273931" expanded="true" signature="275:479" ph="select trave... ImageID" />
-            <marker date="1497445273931" expanded="true" signature="275:487" ph="select trave... ImageID" />
-            <marker date="1497445273931" expanded="true" signature="275:712" ph="select trave... travelimage" />
-            <marker date="1497445273931" expanded="true" signature="275:720" ph="select trave... travelimage" />
-            <marker date="1497445273931" expanded="true" signature="275:722" ph="select trave... travelimage" />
-            <marker date="1497445273931" expanded="true" signature="275:728" ph="select trave... travelimage" />
-            <marker date="1497445273931" expanded="true" signature="761:1155" ph="select COUNT... travelimage" />
-            <marker date="1497445273931" expanded="true" signature="1317:1603" ph="select trave... travelimagedetails" />
-            <marker date="1497445273931" expanded="true" signature="1643:1883" ph="select trave... travelimagedetails" />
-            <marker date="1497445273931" expanded="true" signature="2042:2323" ph="select trave... travelimagedetails" />
-            <marker date="1497445273931" expanded="true" signature="2363:2598" ph="select trave... travelimagedetails" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/travel-images/medium/2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/travel-images/thumb/2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/travel-images/medium/9.jpg" />
-    <entry file="file://$PROJECT_DIR$/img/travel-images/large/9.jpg" />
-    <entry file="file://$PROJECT_DIR$/img/travel-images/large/寰俊鍥剧墖_20170416160100.jpg" />
-    <entry file="file://$PROJECT_DIR$/img/travel-images/medium/寰俊鍥剧墖_20170416160100.jpg" />
-    <entry file="file://$PROJECT_DIR$/img/travel-images/square-medium/寰俊鍥剧墖_20170416160100.jpg" />
-    <entry file="file://$PROJECT_DIR$/img/travel-images/large/222222.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/appendUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <marker date="1497149877884" expanded="true" signature="441:497" ph="select * fro... traveluserdetails" />
-            <marker date="1497149877884" expanded="true" signature="546:568" ph="insert into traveluser... " />
-            <marker date="1497149877884" expanded="true" signature="546:588" ph="insert into traveluser... " />
-            <marker date="1497149877884" expanded="true" signature="546:641" ph="insert into traveluser... " />
-            <marker date="1497149877884" expanded="true" signature="546:667" ph="insert into traveluser... " />
-            <marker date="1497149877884" expanded="true" signature="546:700" ph="insert into traveluser... " />
-            <marker date="1497149877884" expanded="true" signature="546:719" ph="insert into traveluser... " />
-            <marker date="1497149877884" expanded="true" signature="546:728" ph="insert into traveluser... " />
-            <marker date="1497149877884" expanded="true" signature="546:734" ph="insert into traveluser... " />
-            <marker date="1497149877884" expanded="true" signature="759:811" ph="select UID f... traveluser" />
-            <marker date="1497149877884" expanded="true" signature="868:897" ph="insert into traveluserdetails... " />
-            <marker date="1497149877884" expanded="true" signature="868:917" ph="insert into traveluserdetails... " />
-            <marker date="1497149877884" expanded="true" signature="868:938" ph="insert into traveluserdetails... " />
-            <marker date="1497149877884" expanded="true" signature="868:964" ph="insert into traveluserdetails... " />
-            <marker date="1497149877884" expanded="true" signature="868:1001" ph="insert into traveluserdetails... " />
-            <marker date="1497149877884" expanded="true" signature="868:1006" ph="insert into traveluserdetails... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/upload.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/myphotos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/travel-images/thumb/33.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1200,26 +1155,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/250be175/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/pjtravel.travelpost">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/favourite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="177" column="18" lean-forward="true" selection-start-line="177" selection-start-column="18" selection-end-line="177" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,7 +1179,7 @@
         <state relative-caret-position="625">
           <caret line="25" column="63" lean-forward="false" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
           <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
+            <element signature="e#6#88#0#PHP" expanded="false" />
             <marker date="1497716796830" expanded="true" signature="205:538" ph="select tpi.I... travelpost" />
             <marker date="1497716796830" expanded="true" signature="568:786" ph="select COUNT... travelpost" />
           </folding>
@@ -1258,19 +1193,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/myphotos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="107" column="90" lean-forward="false" selection-start-line="107" selection-start-column="90" selection-end-line="107" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/changePhoto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-468">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
+            <element signature="e#6#88#0#PHP" expanded="false" />
             <marker date="1497722527872" expanded="true" signature="207:250" ph="select Path travelimagedetails" />
             <marker date="1497722527872" expanded="true" signature="207:260" ph="select Path travelimagedetails" />
             <marker date="1497722527872" expanded="true" signature="419:469" ph="select PostI... travelpostimages" />
@@ -1287,25 +1215,6 @@
             <marker date="1497722527872" expanded="true" signature="950:986" ph="delete from " />
             <marker date="1497722527872" expanded="true" signature="950:995" ph="delete from " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/250be175/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/pjtravel.travelimage">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1352,46 +1261,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/modify.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/modify.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="120" column="72" lean-forward="false" selection-start-line="120" selection-start-column="72" selection-end-line="120" selection-end-column="72" />
-          <folding>
-            <marker date="1497729327199" expanded="true" signature="1716:1771" ph="update trave... " />
-            <marker date="1497729327199" expanded="true" signature="1716:1815" ph="update trave... " />
-            <marker date="1497729327199" expanded="true" signature="1722:1771" ph="insert into travelimage... " />
-            <marker date="1497729327199" expanded="true" signature="2027:2398" ph="update trave... " />
-            <marker date="1497729327199" expanded="true" signature="2027:2412" ph="update trave... " />
-            <marker date="1497729327199" expanded="true" signature="2027:2422" ph="update trave... " />
-            <marker date="1497729327199" expanded="true" signature="2033:2398" ph="insert into travelimagedetails... " />
-            <marker date="1497729327199" expanded="true" signature="2585:2861" ph="select city.... geocities" />
-            <marker date="1497729327199" expanded="true" signature="3026:3100" ph="select PostI... travelpostimages" />
-            <marker date="1497729327199" expanded="true" signature="3195:3373" ph="update trave... " />
-            <marker date="1497729327199" expanded="true" signature="3195:3386" ph="update trave... " />
-            <marker date="1497729327199" expanded="true" signature="3195:3395" ph="update trave... " />
-            <marker date="1497729327199" expanded="true" signature="3201:3373" ph="insert into travelpost... " />
-            <marker date="1497729327199" expanded="true" signature="3416:3459" ph="delete from " />
-            <marker date="1497729327199" expanded="true" signature="3416:3469" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="39" column="44" lean-forward="false" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/detail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1400,114 +1269,339 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="207" column="1" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="207" selection-end-column="1" />
-          <folding>
-            <marker date="1497718101015" expanded="true" signature="1737:1833" ph="insert into travelimage... " />
-            <marker date="1497718101015" expanded="true" signature="1737:1851" ph="insert into travelimage... " />
-            <marker date="1497718101015" expanded="true" signature="1737:1860" ph="insert into travelimage... " />
-            <marker date="1497718101015" expanded="true" signature="1890:1977" ph="select Image... travelimage" />
-            <marker date="1497718101015" expanded="true" signature="2238:2415" ph="insert into travelimagedetails... " />
-            <marker date="1497718101015" expanded="true" signature="2238:2570" ph="insert into travelimagedetails... " />
-            <marker date="1497718101015" expanded="true" signature="2732:2955" ph="select city.... geocities" />
-            <marker date="1497718101015" expanded="true" signature="2732:3008" ph="select city.... geocities" />
-            <marker date="1497718101015" expanded="true" signature="3165:3280" ph="insert into travelpost... " />
-            <marker date="1497718101015" expanded="true" signature="3165:3298" ph="insert into travelpost... " />
-            <marker date="1497718101015" expanded="true" signature="3165:3323" ph="insert into travelpost... " />
-            <marker date="1497718101015" expanded="true" signature="3165:3355" ph="insert into travelpost... " />
-            <marker date="1497718101015" expanded="true" signature="3384:3458" ph="select PostI... travelpost" />
-            <marker date="1497718101015" expanded="true" signature="3543:3669" ph="insert into travelpostimages... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/general.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="110" column="1" lean-forward="false" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/browse.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/favourite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="57" column="14" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="57" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-400">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modify.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myphotos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
+        <state relative-caret-position="1075">
           <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="42" column="96" lean-forward="false" selection-start-line="42" selection-start-column="96" selection-end-line="42" selection-end-column="96" />
+          <folding>
+            <marker date="1497796071307" expanded="true" signature="288:476" ph="select td.Im... travelimage" />
+            <marker date="1497796071307" expanded="true" signature="288:610" ph="select td.Im... travelimage" />
+            <marker date="1497796071307" expanded="true" signature="705:973" ph="select COUNT... travelimage" />
+            <marker date="1497796071307" expanded="true" signature="1112:1440" ph="select td.Im... travelimage" />
+            <marker date="1497796071307" expanded="true" signature="1541:1815" ph="select COUNT... travelimage" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/favourite.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="57" column="14" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="57" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/250be175/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/pjtravel.geocities">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/myphotos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="104" column="43" lean-forward="false" selection-start-line="104" selection-start-column="43" selection-end-line="104" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/favourite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="102" column="43" lean-forward="false" selection-start-line="102" selection-start-column="43" selection-end-line="102" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/general.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1225">
+          <caret line="110" column="1" lean-forward="false" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3575">
+          <caret line="143" column="55" lean-forward="false" selection-start-line="143" selection-start-column="55" selection-end-line="143" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4075">
+          <caret line="163" column="41" lean-forward="false" selection-start-line="163" selection-start-column="41" selection-end-line="163" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/travel-images/large/IMG_7970.JPG" />
+    <entry file="file://E:/xampp/php/php.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="392" column="16" lean-forward="false" selection-start-line="392" selection-start-column="16" selection-end-line="392" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/250be175/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/pjtravel.travelpost">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/250be175/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/pjtravel.travelpostimages">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/travel-images/thumb/IMG_7820.JPG" />
+    <entry file="file://$PROJECT_DIR$/img/travel-images/square-small/IMG_7820.JPG" />
+    <entry file="file://$PROJECT_DIR$/img/travel-images/square-tiny/IMG_7820.JPG" />
+    <entry file="file://$PROJECT_DIR$/img/travel-images/small/IMG_7820.JPG" />
+    <entry file="file://$PROJECT_DIR$/img/travel-images/square-medium/IMG_7820.JPG" />
+    <entry file="file://$PROJECT_DIR$/php/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="63" column="17" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
+          <folding>
+            <marker date="1498054934216" expanded="true" signature="1803:1890" ph="update trave... " />
+            <marker date="1498054934216" expanded="true" signature="1803:1896" ph="update trave... " />
+            <marker date="1498054934216" expanded="true" signature="1977:2073" ph="insert into travelimage... " />
+            <marker date="1498054934216" expanded="true" signature="1977:2091" ph="insert into travelimage... " />
+            <marker date="1498054934216" expanded="true" signature="1977:2100" ph="insert into travelimage... " />
+            <marker date="1498054934216" expanded="true" signature="2130:2217" ph="select Image... travelimage" />
+            <marker date="1498054934216" expanded="true" signature="2478:2655" ph="insert into travelimagedetails... " />
+            <marker date="1498054934216" expanded="true" signature="2478:2656" ph="insert into travelimagedetails... " />
+            <marker date="1498054934216" expanded="true" signature="2478:2706" ph="insert into travelimagedetails... " />
+            <marker date="1498054934216" expanded="true" signature="2478:2860" ph="insert into travelimagedetails... " />
+            <marker date="1498054934216" expanded="true" signature="3022:3245" ph="select city.... geocities" />
+            <marker date="1498054934216" expanded="true" signature="3022:3298" ph="select city.... geocities" />
+            <marker date="1498054934216" expanded="true" signature="3455:3570" ph="insert into travelpost... " />
+            <marker date="1498054934216" expanded="true" signature="3455:3588" ph="insert into travelpost... " />
+            <marker date="1498054934216" expanded="true" signature="3455:3638" ph="insert into travelpost... " />
+            <marker date="1498054934216" expanded="true" signature="3455:3695" ph="insert into travelpost... " />
+            <marker date="1498054934216" expanded="true" signature="3724:3798" ph="select PostI... travelpost" />
+            <marker date="1498054934216" expanded="true" signature="3883:4009" ph="insert into travelpostimages... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/upload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="63" column="28" lean-forward="false" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+        <state relative-caret-position="-130">
+          <caret line="49" column="43" lean-forward="true" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="48" column="22" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="55" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/modify.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/upload.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="35" column="18" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="41" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="835">
+          <caret line="83" column="56" lean-forward="true" selection-start-line="83" selection-start-column="56" selection-end-line="83" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="113" column="25" lean-forward="false" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/travel-images/large/IMG_7886.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/travel-images/large/IMG_7787.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/travel-images/large/IMG_7806.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/250be175/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/pjtravel.travelimage">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/250be175/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/pjtravel.traveluserdetails">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/250be175/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/pjtravel.traveluser">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/250be175/664dbd5b-5ac6-48ee-bd59-2b7b483b84cc/pjtravel.travelimagedetails">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/modify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1850">
+          <caret line="74" column="24" lean-forward="false" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+          <folding>
+            <marker date="1498060318711" expanded="true" signature="1739:1826" ph="update trave... " />
+            <marker date="1498060318711" expanded="true" signature="1924:1967" ph="select Path travelimage" />
+            <marker date="1498060318711" expanded="true" signature="2071:2126" ph="update trave... " />
+            <marker date="1498060318711" expanded="true" signature="2071:2170" ph="update trave... " />
+            <marker date="1498060318711" expanded="true" signature="2077:2126" ph="insert into travelimage... " />
+            <marker date="1498060318711" expanded="true" signature="2382:2803" ph="update trave... " />
+            <marker date="1498060318711" expanded="true" signature="2382:2817" ph="update trave... " />
+            <marker date="1498060318711" expanded="true" signature="2382:2827" ph="update trave... " />
+            <marker date="1498060318711" expanded="true" signature="2388:2803" ph="insert into travelimagedetails... " />
+            <marker date="1498060318711" expanded="true" signature="2990:3266" ph="select city.... geocities" />
+            <marker date="1498060318711" expanded="true" signature="3431:3505" ph="select PostI... travelpostimages" />
+            <marker date="1498060318711" expanded="true" signature="3600:3828" ph="update trave... " />
+            <marker date="1498060318711" expanded="true" signature="3600:3841" ph="update trave... " />
+            <marker date="1498060318711" expanded="true" signature="3600:3850" ph="update trave... " />
+            <marker date="1498060318711" expanded="true" signature="3606:3828" ph="insert into travelpost... " />
+            <marker date="1498060318711" expanded="true" signature="3871:3914" ph="delete from " />
+            <marker date="1498060318711" expanded="true" signature="3871:3924" ph="delete from " />
+          </folding>
         </state>
       </provider>
     </entry>

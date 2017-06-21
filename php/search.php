@@ -17,14 +17,14 @@ switch ($type){
     case "title":
         $rsByTitle=$db->query("select td.ImageID, ti.Path, td.Title, td.Description
                                 from travelimage as ti, travelimagedetails as td
-                                where td.Title like '%{$condition}%' and td.ImageID=ti.ImageID
+                                where td.Title like '%{$db->real_escape_string($condition)}%' and td.ImageID=ti.ImageID
                                 order by ti.ImageID limit {$start}, {$num}");
 
         echo json_encode($rsByTitle->fetch_all());
 
         $rsTotalNum=$db->query("select COUNT(*)
                                 from travelimage as ti, travelimagedetails as td
-                                where td.Title like '%{$condition}%' and td.ImageID=ti.ImageID
+                                where td.Title like '%{$db->real_escape_string($condition)}%' and td.ImageID=ti.ImageID
                                 order by ti.ImageID");
         echo "&".$rsTotalNum->fetch_assoc()['COUNT(*)'];
 
@@ -33,14 +33,14 @@ switch ($type){
     case "description":
         $rsByDescription=$db->query("select td.ImageID, ti.Path, td.Title, td.Description
                                 from travelimage as ti, travelimagedetails as td
-                                where td.Description like '%{$condition}%' and td.ImageID=ti.ImageID
+                                where td.Description like '%{$db->real_escape_string($condition)}%' and td.ImageID=ti.ImageID
                                 order by ti.ImageID limit {$start}, {$num}");
 
         echo json_encode($rsByDescription->fetch_all());
 
         $rsTotalNum=$db->query("select COUNT(*)
                                 from travelimage as ti, travelimagedetails as td
-                                where td.Description like '%{$condition}%' and td.ImageID=ti.ImageID
+                                where td.Description like '%{$db->real_escape_string($condition)}%' and td.ImageID=ti.ImageID
                                 order by ti.ImageID");
         echo "&".$rsTotalNum->fetch_assoc()['COUNT(*)'];
         break;

@@ -41,6 +41,16 @@ section input:not([type="submit"]), textarea{
     margin: 1em;
 }
 
+.tip{
+    width:20em;
+    margin-left: 1em;
+    margin-top: 1.2em;
+    font-size: small;
+    font-family: Arial;
+    font-weight: bold;
+    color: darkred;
+}
+
 input[type="submit"]{
     margin: 1em;
     color: azure;

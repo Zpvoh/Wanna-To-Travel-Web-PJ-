@@ -46,28 +46,36 @@
         <h2>Upload</h2>
         <form name="upload" id="upload" method="post" action="php/upload.php" enctype="multipart/form-data">
             <div>
-                <input type="file" id="fileBox" name="file">
+                <input type="file" id="fileBox" name="file" accept="image/png,image/jpeg,image/gif">
+                <span id="file" class="tip"></span>
             </div>
             <div>
                 <input type="text" id="photoNameBox" placeholder="Photo Name..." name="photoName">
+                <span id="photo name" class="tip"></span>
             </div>
             <div>
                 <textarea placeholder="Photo Description..." name="description"></textarea>
+                <span id="description" class="tip"></span>
             </div>
             <div>
                 <input type="text" placeholder="City..." name="city">
+                <span id="city" class="tip"></span>
             </div>
             <div>
                 <input type="text" placeholder="Country..." name="country">
+                <span id="country" class="tip"></span>
             </div>
             <div>
                 <input type="text" placeholder="Continent..." name="continent">
+                <span id="continent" class="tip"></span>
             </div>
             <div>
                 <input type="number" placeholder="Latitude..." name="latitude" min="-180" max="180">
+                <span id="latitude" class="tip"></span>
             </div>
             <div>
                 <input type="number" placeholder="Longitude..." name="longitude" min="-90" max="90">
+                <span id="longitude" class="tip"></span>
             </div>
             <div>
                 <input type="button" value="Submit" id="submit">

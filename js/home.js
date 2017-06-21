@@ -124,7 +124,7 @@ function recommendPicInitial(recommendDivNum) {
     var descriptionElement=document.createElement("p");
     var viewdetail=document.createElement("p");
 
-    viewdetail.innerHTML="<a href=\"#recommendStage\">View details ▽</a>";
+    viewdetail.innerHTML="<a>View details ▽</a>";
 
     figure.appendChild(img);
     figure.appendChild(titleElement);
@@ -159,6 +159,7 @@ function recommendPicDisplay() {
             var titleElement=recommendPics[i].getElementsByTagName("figcaption")[0];
             var descriptionElement=recommendPics[i].getElementsByTagName("p")[0];
             img.dataset.imageid=id;
+            recommendPics[i].getElementsByTagName("a")[0].href="detail.html?ImageID="+id;
             img.src='img/travel-images/square-medium/'+path;
             titleElement.innerText=title;
             descriptionElement.innerText=description;

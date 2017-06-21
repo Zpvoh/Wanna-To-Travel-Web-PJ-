@@ -22,7 +22,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
         || ($_FILES["file"]["type"] == "image/pjpeg")
         || ($_FILES["file"]["type"] == "image/x-png")
         || ($_FILES["file"]["type"] == "image/png"))
-    && ($_FILES["file"]["size"] < 5000*1024)   // 小于 200 kb
+    && ($_FILES["file"]["size"] < 10000*1024)   // 小于 5000 kb
 )
 {
     if ($_FILES["file"]["error"] > 0)
@@ -46,6 +46,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
         $db->begin_transaction();
         changeImage();
         changePost();
+        changeModifyTime();
         $db->commit();
         echo "Done";
 
@@ -59,8 +60,19 @@ else
     echo $_FILES['file']['error'];
 }
 
+function changeModifyTime(){
+    global $db, $uid;
+    $db->query("update traveluser
+                set DateLastModified=now()
+                WHERE UID={$uid}");
+}
+
 function changeImage(){
     global $db, $imageID, $path;
+
+    $rsOldPath=$db->query("select Path from travelimage WHERE ImageID={$imageID}");
+    $oldPath=$rsOldPath->fetch_assoc()['Path'];
+    deletePic($oldPath);
 
     $db->query("update travelimage
                  set Path= '{$path}'
@@ -73,8 +85,8 @@ function changeImage(){
     $codes=getCode($_POST['city'], $_POST['country']);
 
     $db->query("update travelimagedetails
-                set Title='{$_POST['photoName']}', 
-                    Description= '{$_POST['description']}',
+                set Title='{$db->real_escape_string($_POST['photoName'])}', 
+                    Description= '{$db->real_escape_string($_POST['description'])}',
                      Latitude={$_POST['latitude']}, 
                      Longitude={$_POST['longitude']}, 
                      CityCode={$codes['GeoNameID']},
@@ -113,8 +125,8 @@ function changePost(){
     $postID=$post['PostID'];
 
     $db->query("update travelpost
-                set Title='{$_POST['photoName']}', 
-                    Message='{$_POST['description']}', 
+                set Title='{$db->real_escape_string($_POST['photoName'])}', 
+                    Message='{$db->real_escape_string($_POST['description'])}', 
                     PostTime=now()
                  WHERE PostID={$postID}");
 
@@ -202,6 +214,16 @@ function clipPic(){
             imagepng($imgT, "../img/travel-images/thumb/" . $path);
             break;
     }
+}
+
+function deletePic($oldPath){
+    unlink("../img/travel-images/large/" . $oldPath);
+    unlink("../img/travel-images/square-medium/" . $oldPath);
+    unlink("../img/travel-images/square-small/" . $oldPath);
+    unlink("../img/travel-images/square-tiny/" . $oldPath);
+    unlink("../img/travel-images/medium/" . $oldPath);
+    unlink("../img/travel-images/small/" . $oldPath);
+    unlink("../img/travel-images/thumb/" . $oldPath);
 }
 
 function rollback(){
