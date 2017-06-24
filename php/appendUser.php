@@ -7,9 +7,12 @@
  */
 
 include_once "connectDatabase.php";
+include_once "PasswordHash.php";
+
+$hasher=new PasswordHash(8, false);
 
 $email=$_POST["email"];
-$password=$_POST["password"];
+$password=$hasher->HashPassword($_POST["password"]);
 $username=$_POST["username"];
 
 if($email=="" || $password=="" || $username=="" || strlen($password)<=6 || strlen($username)<3){
@@ -36,7 +39,7 @@ if(!$rsUID->fetch_assoc()){
                 "VALUES".
                 "({$uid},'{$email}', 1)");
 
-    echo $uid;
+    echo $uid."&".$username;
 }else{
     echo "You've registered";
 }

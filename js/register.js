@@ -73,7 +73,8 @@ window.addEventListener("load", function () {
                 expireTime.setTime(expireTime.getTime()+7*24*3600*1000);
                 login.style.display = "none";
                 afterLog.style.display = "inline";
-                document.cookie+="UID="+response+"; expires="+expireTime.toUTCString();
+                document.cookie+="UID="+response.split("&")[0]+"; expires="+expireTime.toUTCString();
+                document.cookie="UserName="+response.split("&")[1]+";expires="+expireTime.toUTCString();
             }else{
                 alert(response);
             }
