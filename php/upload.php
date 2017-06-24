@@ -39,7 +39,6 @@ if ((($_FILES["file"]["type"] == "image/gif")
             echo $path . " 文件已经存在。 ";
             $path=$path+rand(1000, 9999);
         }
-
             // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
             move_uploaded_file($_FILES["file"]["tmp_name"], "../img/travel-images/large/" . $path);
             clipPic();
@@ -95,7 +94,6 @@ function insertImage(){
         die($db->error);
     }
 }
-
 function getCode($cityName, $countryName){
     global $db;
 

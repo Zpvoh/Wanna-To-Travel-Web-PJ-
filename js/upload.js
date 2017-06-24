@@ -1,14 +1,14 @@
 /**
  * Created by qyy on 2017/3/30.
  */
-var uploadXhr=new XMLHttpRequest();
 
+var uploadXhr=new XMLHttpRequest();
 window.addEventListener("load", function () {
     uploadXhr.onload=function () {
         console.log(uploadXhr.responseText);
         if(uploadXhr.responseText=="Done"){
             location.reload(true);
-            alert("Upload success!");
+            alert("Upload succeed!!：）");//警告：上传成功！
         }else{
             alert("Ohh, there is something wrong!");
         }
@@ -27,9 +27,10 @@ function initialSubmit() {
 
 
     submit.addEventListener("click", function () {
+
         var formUpload=document.getElementById("upload");
         var formData=new FormData(formUpload);
-        formData.append("uid", uid);
+        formData.append("uid", uid);//追加UID信息 非常厉害 吓到617、css们了
 
         var divs=formUpload.getElementsByTagName("div");
 
