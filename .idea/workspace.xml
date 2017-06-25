@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fb897dd3-a78b-4ea1-ae5a-2141127608bc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,35 +64,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="findPicAlgorithm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/findPicAlgorithm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
-              <folding>
-                <marker date="1498377882977" expanded="true" signature="143:191" ph="select Path,... travelimage" />
-                <marker date="1498377882977" expanded="true" signature="260:371" ph="select Descr... travelimagedetails" />
-                <marker date="1498377882977" expanded="true" signature="708:768" ph="select First... traveluserdetails" />
-                <marker date="1498377882977" expanded="true" signature="949:997" ph="select Ascii... geocities" />
-                <marker date="1498377882977" expanded="true" signature="1169:1235" ph="select Count... geocountries" />
-                <marker date="1498377882977" expanded="true" signature="1510:1575" ph="select * fro... travelimagefavor" />
-                <marker date="1498377882977" expanded="true" signature="1667:1694" ph="..." />
-                <marker date="1498377882977" expanded="true" signature="1721:1773" ph="select count... travelimagefavor" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connectDatabase.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/connectDatabase.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="modify.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/modify.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -107,7 +79,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="446">
               <caret line="56" column="92" lean-forward="false" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
-              <folding />
+              <folding>
+                <marker date="1498387071646" expanded="true" signature="85:3137" ph="{...}" />
+                <marker date="1498387071646" expanded="true" signature="1323:3132" ph="{...}" />
+                <marker date="1498387071646" expanded="true" signature="1846:1970" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,11 +118,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="general.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="general.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/general.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="140" column="70" lean-forward="true" selection-start-line="140" selection-start-column="70" selection-end-line="140" selection-end-column="70" />
+            <state relative-caret-position="100">
+              <caret line="140" column="70" lean-forward="false" selection-start-line="140" selection-start-column="70" selection-end-line="140" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="83" column="10" lean-forward="false" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -185,7 +171,7 @@
         <entry file="file://$PROJECT_DIR$/css/upload.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="46" column="19" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="51" selection-end-column="1" />
+              <caret line="46" column="19" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="51" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -235,7 +221,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/register.css" />
         <option value="$PROJECT_DIR$/php/filterSelect.php" />
         <option value="$PROJECT_DIR$/css/browse.css" />
         <option value="$PROJECT_DIR$/browse.html" />
@@ -262,7 +247,6 @@
         <option value="$PROJECT_DIR$/js/general.js" />
         <option value="$PROJECT_DIR$/myphotos.html" />
         <option value="$PROJECT_DIR$/php/changePhoto.php" />
-        <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/detail.html" />
         <option value="$PROJECT_DIR$/php/search.php" />
         <option value="$PROJECT_DIR$/js/search.js" />
@@ -286,6 +270,8 @@
         <option value="$PROJECT_DIR$/js/home.js" />
         <option value="$PROJECT_DIR$/php/appendUser.php" />
         <option value="$PROJECT_DIR$/js/register.js" />
+        <option value="$PROJECT_DIR$/home.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -853,7 +839,7 @@
       <workItem from="1497795885945" duration="7809000" />
       <workItem from="1498054506490" duration="6119000" />
       <workItem from="1498219790404" duration="19526000" />
-      <workItem from="1498377146252" duration="7752000" />
+      <workItem from="1498377146252" duration="8749000" />
     </task>
     <task id="LOCAL-00001" summary="第三个版本">
       <created>1497024947458</created>
@@ -981,11 +967,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498395007605</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="文档最终完成版">
+      <created>1498395215242</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1498395215242</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282743000" />
+    <option name="totallyTimeSpent" value="283740000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -998,7 +991,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296371" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1014,7 +1007,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296371" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18060021" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18060021" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18649517" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1100,13 +1093,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/favourite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="57" column="14" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="57" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1151,14 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1426,7 +1404,7 @@
     <entry file="file://$PROJECT_DIR$/php/connectDatabase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1434,7 +1412,7 @@
     <entry file="file://$PROJECT_DIR$/css/upload.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="46" column="19" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="51" selection-end-column="1" />
+          <caret line="46" column="19" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="51" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1492,7 +1470,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
           <caret line="56" column="92" lean-forward="false" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
-          <folding />
+          <folding>
+            <marker date="1498387071646" expanded="true" signature="85:3137" ph="{...}" />
+            <marker date="1498387071646" expanded="true" signature="1323:3132" ph="{...}" />
+            <marker date="1498387071646" expanded="true" signature="1846:1970" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1524,8 +1506,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/general.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="140" column="70" lean-forward="true" selection-start-line="140" selection-start-column="70" selection-end-line="140" selection-end-column="70" />
+        <state relative-caret-position="100">
+          <caret line="140" column="70" lean-forward="false" selection-start-line="140" selection-start-column="70" selection-end-line="140" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="50">
+            <caret line="86" column="8" lean-forward="false" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="83" column="10" lean-forward="false" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
           <folding />
         </state>
       </provider>
