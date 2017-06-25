@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
             location.reload(true);
             alert("Modify success!");
         }else{
-            alert("Ohh, there is something wrong!");
+            alert(uploadXhr.responseText);
         }
     };
 
@@ -70,7 +70,7 @@ function initialSubmit() {
         var divs=formUpload.getElementsByTagName("div");
 
         var submitable=false;
-        for(var i=1; i<9; i++){
+        for(var i=2; i<9; i++){
             var ele=divs[i].getElementsByTagName("input")[0];
 
             if(ele==undefined) {
@@ -81,7 +81,7 @@ function initialSubmit() {
             }
             var tip=ele.nextSibling.nextSibling;
 
-            if(ele.value=="" || ele.value==undefined){
+            if((ele.value=="" || ele.value==undefined)){
                 tip.innerText="You should input "+tip.id;
                 submitable=false;
                 break;
@@ -89,7 +89,7 @@ function initialSubmit() {
                 tip.innerText="";
             }
 
-            if(i==7){
+            if(i==6){
                 submitable=true;
             }
         }

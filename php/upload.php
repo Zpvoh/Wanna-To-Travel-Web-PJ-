@@ -27,7 +27,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
 {
     if ($_FILES["file"]["error"] > 0)
     {
-        echo "错误：: " . $_FILES["file"]["error"] . "<br>";
+        die("错误：: " . $_FILES["file"]["error"] . "<br>");
     }
     else
     {
@@ -36,8 +36,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
         // 如果没有../img/travel-images/large/目录，你需要创建它
         while (file_exists("../img/travel-images/large/" . $path))
         {
-            echo $path . " 文件已经存在。 ";
-            $path=$path+rand(1000, 9999);
+            $path=rand(1000000000, 9999999999).".jpg";
         }
             // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
             move_uploaded_file($_FILES["file"]["tmp_name"], "../img/travel-images/large/" . $path);

@@ -88,7 +88,11 @@ function sendRequest() {
         var likeNum=document.getElementById("likeNum").getElementsByTagName("p")[0];
 
         title.innerText=picInfo[2];
-        name.innerText=picInfo[5];
+        if($.trim(picInfo[5])!="") {
+            name.innerText = picInfo[5];
+        }else{
+            name.innerText="Nameless";
+        }
         pic.src="img/travel-images/large/"+picInfo[0];
         country.innerText="Country: "+picInfo[6];
         city.innerText="City: "+picInfo[7];

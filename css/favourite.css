@@ -88,3 +88,12 @@ input[value="Delete"]{
     padding: 0.5em 1em 0.5em 1em;
     margin-right: 1em;
 }
+
+.tip{
+    position: absolute;
+    bottom:20em;
+    left:27.3em;
+    font-family: "Arial Black";
+    font-weight: bold;
+    font-size: x-large;
+}

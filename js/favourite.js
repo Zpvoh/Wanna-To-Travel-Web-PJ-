@@ -26,20 +26,15 @@ function initialFavourite() {
         var text=document.createElement("div");
         var title=document.createElement("h1");
         var description=document.createElement("p");
-        var deleteBt=document.createElement("input");
 
         text.classList.add("text");
         text.appendChild(title);
         text.appendChild(description);
 
-        deleteBt.type="button";
-        deleteBt.className="delete";
-        deleteBt.value="Delete";
 
         imgDiv.classList.add("imgDiv");
         imgDiv.appendChild(img);
         imgDiv.appendChild(text);
-        imgDiv.appendChild(deleteBt);
 
         favourite.appendChild(imgDiv);
     }
@@ -95,41 +90,48 @@ function favouriteDisplay() {
                 imgDiv[i].removeChild(imgDiv[i].getElementsByClassName("delete")[0]);
             }
         }
+        if(info.length!=0) {
+            for (var i = 0; i < info.length; i++) {
+                img[i].src = "img/travel-images/square-medium/" + info[i][1];
+                img[i].dataset.imageid = info[i][0];
+                title[i].innerText = info[i][2];
+                title[i].dataset.imageid = info[i][0];
+                title[i].style.cursor = "pointer";
+                title[i].addEventListener("click", function () {
+                    window.open("detail.html?ImageID=" + this.dataset.imageid);
+                }, true);
 
-        for(var i=0; i<info.length; i++){
-            img[i].src="img/travel-images/square-medium/"+info[i][1];
-            img[i].dataset.imageid=info[i][0];
-            title[i].innerText=info[i][2];
-            title[i].dataset.imageid = info[i][0];
-            title[i].style.cursor="pointer";
-            title[i].addEventListener("click", function () {
-                window.open("detail.html?ImageID="+this.dataset.imageid);
-            }, true);
+                description[i].innerText = info[i][3];
 
-            description[i].innerText=info[i][3];
+                var deleteBt = document.createElement("input");
+                deleteBt.type = "button";
+                deleteBt.dataset.imageid = info[i][0];
+                deleteBt.className = "delete";
+                deleteBt.value = "Delete";
+                deleteBt.addEventListener("click", function () {
+                    sendDeleteRequest(uid, this.dataset.imageid);
+                    deleteXhr.onload = function () {
+                        if (deleteXhr.responseText == "Ok") {
+                            location.reload(true);   //Need to be modified
+                        } else {
+                            alert("There is something wrong");   //Need to be modified
+                        }
+                    };
+                }, true);
+                imgDiv[i].appendChild(deleteBt);
 
-            var deleteBt=document.createElement("input");
-            deleteBt.type="button";
-            deleteBt.dataset.imageid=info[i][0];
-            deleteBt.className="delete";
-            deleteBt.value="Delete";
-            deleteBt.addEventListener("click",function () {
-                sendDeleteRequest(uid, this.dataset.imageid);
-                deleteXhr.onload=function () {
-                    if(deleteXhr.responseText=="Ok"){
-                        location.reload(true);   //Need to be modified
-                    }else{
-                        alert("There is something wrong");   //Need to be modified
-                    }
-                };
-            }, true);
-            imgDiv[i].appendChild(deleteBt);
+            }
 
+            var picTotalNum = favouriteXhr.responseText.split("&")[1];
+            totalPageNum = parseInt(picTotalNum / singlePageNum) + (picTotalNum % singlePageNum == 0 ? 0 : 1);
+            initialPageTurner();
+        }else{
+            var text=document.createElement("span");
+            text.innerText="No Result";
+            text.classList.add("tip");
+            favouriteDiv.appendChild(text);
+            initialPageTurner();
         }
-
-        var picTotalNum = favouriteXhr.responseText.split("&")[1];
-        totalPageNum = parseInt(picTotalNum / singlePageNum) + (picTotalNum % singlePageNum == 0 ? 0 : 1);
-        initialPageTurner();
 
     };
 }

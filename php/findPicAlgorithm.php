@@ -47,16 +47,16 @@ if($rsCountries) {
 }
 
 $favorUID=0;
-if(isset($_GET['uid'])){
+if(isset($_GET['uid']) && $_GET['uid']!="undefined"){
     $favorUID=$_GET['uid'];
 }
 
 $rsFavor=$db->query("select * from travelimagefavor WHERE UID={$favorUID} AND ImageID={$_GET['ImageID']}");
 
-if($rsFavor->fetch_assoc()){
-    $isFavor="Favourite";
-}else{
+if(!$rsFavor->fetch_assoc()){
     $isFavor="Add to favourite";
+}else{
+    $isFavor="Favourite";
 }
 
 $rsFavorNum=$db->query("select count(*) from travelimagefavor WHERE ImageID={$_GET['ImageID']}");

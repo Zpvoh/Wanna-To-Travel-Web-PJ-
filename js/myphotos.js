@@ -26,20 +26,14 @@ function initialUpload() {
         var text=document.createElement("div");
         var title=document.createElement("h1");
         var description=document.createElement("p");
-        var deleteBt=document.createElement("input");
 
         text.classList.add("text");
         text.appendChild(title);
         text.appendChild(description);
 
-        deleteBt.type="button";
-        deleteBt.className="delete";
-        deleteBt.value="Delete";
-
         imgDiv.classList.add("imgDiv");
         imgDiv.appendChild(img);
         imgDiv.appendChild(text);
-        imgDiv.appendChild(deleteBt);
 
         upload.appendChild(imgDiv);
     }
@@ -83,65 +77,71 @@ function uploadDisplay() {
         var info=JSON.parse(uploadXhr.responseText.split("&")[0]);
         console.log(info);
 
-        for (var i = 0; i < img.length; i++) {
-            img[i].src = "";
-            img[i].dataset.imageid = 0;
-            title[i].innerText = "";
-            title[i].dataset.imageid = 0;
-            title[i].addEventListener("click", function () {
 
-            }, true);
+            for (var i = 0; i < img.length; i++) {
+                img[i].src = "";
+                img[i].dataset.imageid = 0;
+                title[i].innerText = "";
+                title[i].dataset.imageid = 0;
 
-            description[i].innerText = "";
-            if(imgDiv[i].getElementsByClassName("delete")[0]!=undefined) {
-                imgDiv[i].removeChild(imgDiv[i].getElementsByClassName("delete")[0]);
+                description[i].innerText = "";
+                if (imgDiv[i].getElementsByClassName("delete")[0] != undefined) {
+                    imgDiv[i].removeChild(imgDiv[i].getElementsByClassName("delete")[0]);
+                }
             }
+
+        if(info.length!=0) {
+            for (var i = 0; i < info.length; i++) {
+                img[i].src = "img/travel-images/square-medium/" + info[i][1];
+                img[i].dataset.imageid = info[i][0];
+                title[i].innerText = info[i][2];
+                title[i].dataset.imageid = info[i][0];
+                title[i].style.cursor = "pointer";
+                title[i].addEventListener("click", function () {
+                    window.open("detail.html?ImageID=" + this.dataset.imageid);
+                }, true);
+
+                description[i].innerText = info[i][3];
+
+                var modifyBt = document.createElement("input");
+                modifyBt.type = "button";
+                modifyBt.value = "Modify";
+                modifyBt.className = "modify";
+                modifyBt.dataset.imageid = info[i][0];
+                modifyBt.addEventListener("click", function () {
+                    window.open("modify.html?" + changeDemand("ImageID", this.dataset.imageid));
+                }, true);
+                imgDiv[i].appendChild(modifyBt);
+
+                var deleteBt = document.createElement("input");
+                deleteBt.type = "button";
+                deleteBt.dataset.imageid = info[i][0];
+                deleteBt.className = "delete";
+                deleteBt.value = "Delete";
+                deleteBt.addEventListener("click", function () {
+                    sendDeleteRequest(uid, this.dataset.imageid);
+                    deleteXhr.onload = function () {
+                        if (deleteXhr.responseText == "Ok") {
+                            location.reload(true);   //Need to be modified
+                        } else {
+                            alert("There is something wrong");   //Need to be modified
+                        }
+                    };
+                }, true);
+                imgDiv[i].appendChild(deleteBt);
+
+            }
+
+            var picTotalNum = uploadXhr.responseText.split("&")[1];
+            totalPageNum = parseInt(picTotalNum / singlePageNum) + (picTotalNum % singlePageNum == 0 ? 0 : 1);
+            initialPageTurner();
+        }else{
+            var text=document.createElement("span");
+            text.innerText="No Result";
+            text.classList.add("tip");
+            uploadDiv.appendChild(text);
+            initialPageTurner();
         }
-
-        for(var i=0; i<info.length; i++){
-            img[i].src="img/travel-images/square-medium/"+info[i][1];
-            img[i].dataset.imageid=info[i][0];
-            title[i].innerText=info[i][2];
-            title[i].dataset.imageid = info[i][0];
-            title[i].style.cursor="pointer";
-            title[i].addEventListener("click", function () {
-                window.open("detail.html?ImageID="+this.dataset.imageid);
-            }, true);
-
-            description[i].innerText=info[i][3];
-
-            var modifyBt=document.createElement("input");
-            modifyBt.type="button";
-            modifyBt.value="Modify";
-            modifyBt.className="modify";
-            modifyBt.dataset.imageid=info[i][0];
-            modifyBt.addEventListener("click", function () {
-                window.open("modify.html?"+changeDemand("ImageID", this.dataset.imageid));
-            },true);
-            imgDiv[i].appendChild(modifyBt);
-
-            var deleteBt=document.createElement("input");
-            deleteBt.type="button";
-            deleteBt.dataset.imageid=info[i][0];
-            deleteBt.className="delete";
-            deleteBt.value="Delete";
-            deleteBt.addEventListener("click",function () {
-                sendDeleteRequest(uid, this.dataset.imageid);
-                deleteXhr.onload=function () {
-                    if(deleteXhr.responseText=="Ok"){
-                        location.reload(true);   //Need to be modified
-                    }else{
-                        alert("There is something wrong");   //Need to be modified
-                    }
-                };
-            }, true);
-            imgDiv[i].appendChild(deleteBt);
-
-        }
-
-        var picTotalNum = uploadXhr.responseText.split("&")[1];
-        totalPageNum = parseInt(picTotalNum / singlePageNum) + (picTotalNum % singlePageNum == 0 ? 0 : 1);
-        initialPageTurner();
 
     };
 }
