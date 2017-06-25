@@ -99,8 +99,8 @@ function clickChoosePage() {
     var pagesArray=choose.getElementsByTagName("img");
     for(var i=0; i<pagesArray.length; i++){
         pagesArray[i].onclick=function () {
-            index=2-findIndexInArray(event.srcElement, pagesArray);
-            slideSendRequest(index+1);
+            index=2-findIndexInArray(this, pagesArray);
+            slideSendRequest(index);
         }
     }
 }

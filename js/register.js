@@ -53,7 +53,8 @@ window.addEventListener("load", function () {
             return;
         }
 
-        if((emailTip.value!="" || passwordTip.value!="" || usernameTip.value!="") &&(emailTip.value!=undefined ||passwordTip.value!=undefined ||usernameTip.value!=undefined)){
+        if(emailTip.innerText!="" || passwordTip.innerText!="" || usernameTip.innerText!=""){
+            alert(emailTip.innerText+"\n"+passwordTip.innerText+"\n"+usernameTip.innerText);
             return;
         }
 

@@ -51,7 +51,7 @@ section input:not([type="submit"]), textarea{
     color: darkred;
 }
 
-input[type="submit"]{
+input[type="button"]{
     margin: 1em;
     color: azure;
     padding: 0.5em;

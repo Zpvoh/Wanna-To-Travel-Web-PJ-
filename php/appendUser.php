@@ -12,7 +12,7 @@ include_once "PasswordHash.php";
 $hasher=new PasswordHash(8, false);
 
 $email=$_POST["email"];
-$password=$hasher->HashPassword($_POST["password"]);
+$password=$_POST["password"];
 $username=$_POST["username"];
 
 if($email=="" || $password=="" || $username=="" || strlen($password)<=6 || strlen($username)<3){
@@ -22,6 +22,8 @@ if($email=="" || $password=="" || $username=="" || strlen($password)<=6 || strle
 if(preg_match("/^[a-z|0-9]+@([a-z0-9]+\\.)+[a-z]{2,}$/i", $email)==0){
     die("ERROR");
 }
+
+$password=$hasher->HashPassword($_POST["password"]);
 
 $rsUID=$db->query("select UID from traveluserdetails WHERE Email='{$email}'");
 
