@@ -31,7 +31,10 @@ window.addEventListener("load", function () {
     username.addEventListener("input", function () {
         if(username.value.length<3){
             usernameTip.innerText="Can you give a longer username?";
-        }else{
+        }else if($.trim(username.value)==""){
+            usernameTip.innerText="Don't just use blank character!";
+        }
+        else{
             usernameTip.innerText="";
         }
     });

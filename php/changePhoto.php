@@ -25,6 +25,7 @@ switch ($type){
 
         $db->query("delete from travelpostimages WHERE ImageID={$imageID}");
         $db->query("delete from travelimagedetails WHERE ImageID={$imageID}");
+        $db->query("delete from travelimagefavor WHERE ImageID={$imageID}");
         $db->query("delete from travelimage WHERE ImageID={$imageID} and UID={$_GET['uid']}");
         $rs=$db->query("select * from travelpostimages WHERE PostID={$postID}");
         if(!$rs->fetch_assoc()){

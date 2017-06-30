@@ -144,6 +144,11 @@ function resultDisplay(type) {
                     window.open("detail.html?ImageID="+this.dataset.imageid);
                 }, true);
                 description[i].innerText = result[i][3];
+                description[i].style.cursor="pointer";
+                description[i].dataset.imageid = result[i][0];
+                description[i].addEventListener("click", function () {
+                    window.open("detail.html?ImageID="+this.dataset.imageid);
+                }, true);
             }
 
             var picTotalNum = searchXhr.responseText.split("&")[1];

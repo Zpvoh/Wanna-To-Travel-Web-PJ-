@@ -14,9 +14,9 @@ $imageID=$_POST['ImageID'];
 // 允许上传的图片后缀
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 if($_FILES["file"]["size"]!=0) {
-    $path=$_FILES['file']['name'];
     $temp = explode(".", $_FILES["file"]["name"]);
     $extension = end($temp);     // 获取文件后缀名
+    $path=rand(1000000000, 9999999999).".".$extension;
     if ((($_FILES["file"]["type"] == "image/gif")
             || ($_FILES["file"]["type"] == "image/jpeg")
             || ($_FILES["file"]["type"] == "image/jpg")
@@ -32,15 +32,20 @@ if($_FILES["file"]["size"]!=0) {
             // 判断../img/travel-images/large/目录是否存在该文件
             // 如果没有../img/travel-images/large/目录，你需要创建它
             while (file_exists("../img/travel-images/large/" . $path)) {
-                $path = $path + rand(1000, 9999);
+                $path = rand(1000000000, 9999999999).".".$extension;
             }
 
             // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
             move_uploaded_file($_FILES["file"]["tmp_name"], "../img/travel-images/large/" . $path);
+			if(!file_exists("../img/travel-images/large/" . $path)){
+				die("ERROR");
+			}
+			
             clipPic();
             $db->begin_transaction();
             changeImage();
             changePost();
+            deleteFavor();
             changeModifyTime();
             $db->commit();
             echo "Done";
@@ -71,7 +76,7 @@ function changeModifyTime(){
 function changeImage(){
     global $db, $imageID;
 
-    if(isset($path)) {
+    if($_FILES["file"]["size"]!=0) {
         global $path;
         $rsOldPath = $db->query("select Path from travelimage WHERE ImageID={$imageID}");
         $oldPath = $rsOldPath->fetch_assoc()['Path'];
@@ -153,6 +158,15 @@ function changePost(){
                     Message='{$db->real_escape_string($_POST['description'])}', 
                     PostTime=now()
                  WHERE PostID={$postID}");
+
+    if($db->error!=""){
+        rollback();
+        die($db->error);
+    }
+}
+
+function deleteFavor(){
+    global $db, $imageID;
 
     $db->query("delete from travelimagefavor WHERE ImageID={$imageID}");
 

@@ -141,6 +141,7 @@ function login() {
             afterLog.innerText="Welcome, "+response.split("&")[1]+"▼";
             document.cookie="UID="+response.split("&")[0]+";expires="+expireTime.toUTCString();
             document.cookie="UserName="+response.split("&")[1]+";expires="+expireTime.toUTCString();
+            window.location.href="home.html";
         } else {
             alert("Please check your input. There is something wrong.");
 
@@ -164,6 +165,8 @@ function logout() {
     expireTime.setTime(expireTime.getTime()-60000);
     document.cookie="UID=; expires="+expireTime.toUTCString();
     document.cookie="UserName=; expires="+expireTime.toUTCString();
+
+    window.location.href="home.html";
 }
 
 function isContains(str, substr) {

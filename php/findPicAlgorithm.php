@@ -38,12 +38,20 @@ if($rsCities) {
     $city="I don't know";
 }
 
-$rsCountries=$db->query("select CountryName from geocountries where ISO='{$countryCodeISO}'");
+$rsCountries=$db->query("select CountryName, Continent from geocountries where ISO='{$countryCodeISO}'");
 if($rsCountries) {
     $rowCountries = $rsCountries->fetch_assoc();
     $country = $rowCountries['CountryName'];
+    $continentISO=$rowCountries['Continent'];
 }else{
     $country="I don't know";
+}
+
+if(isset($continentISO)) {
+    $rsContinent = $db->query("select ContinentName from geocontinents
+                         where ContinentCode='{$continentISO}'");
+    $rowContinent=$rsContinent->fetch_assoc();
+    $continent=$rowContinent['ContinentName'];
 }
 
 $favorUID=0;

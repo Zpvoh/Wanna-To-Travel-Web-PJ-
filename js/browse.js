@@ -48,6 +48,7 @@ function initialSelect() {
     fetch("php/filterSelect.php?type=get_continent_list").then(function(rsp) {
         return rsp.text();
     }).then(function(data) {
+        console.log(data);
         data = JSON.parse(data);
 
         while (continent_sel.firstChild) {

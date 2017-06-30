@@ -44,6 +44,7 @@ function initial() {
        country.value=info[6];
        latitude.value=info[3];
        longitude.value=info[4];
+       continent.value=info[10];
 
     };
 }

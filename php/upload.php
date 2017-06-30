@@ -10,12 +10,12 @@ include_once "connectDatabase.php";
 $uid=$_POST['uid'];
 $title=$_POST['photoName'];
 $message=$_POST['description'];
-$path=$_FILES['file']['name'];
 $imageID=1;
 // 允许上传的图片后缀
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);     // 获取文件后缀名
+$path=rand(1000000000, 9999999999).".".$extension;
 if ((($_FILES["file"]["type"] == "image/gif")
         || ($_FILES["file"]["type"] == "image/jpeg")
         || ($_FILES["file"]["type"] == "image/jpg")
@@ -36,7 +36,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
         // 如果没有../img/travel-images/large/目录，你需要创建它
         while (file_exists("../img/travel-images/large/" . $path))
         {
-            $path=rand(1000000000, 9999999999).".jpg";
+            $path=rand(1000000000, 9999999999).".".$extension;
         }
             // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
             move_uploaded_file($_FILES["file"]["tmp_name"], "../img/travel-images/large/" . $path);

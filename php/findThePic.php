@@ -17,5 +17,10 @@ echo $country."&";
 echo $city."&";
 echo $isFavor."&";
 echo $favorNum;
+if(isset($continent)){
+    echo "&".$continent;
+}else{
+    echo "&I don't know";
+}
 
 $db->close();
